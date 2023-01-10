@@ -27,7 +27,7 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
-
+//TODO : noch nicht fertig
         return binding.root
     }
 
@@ -41,7 +41,7 @@ class LoginFragment : Fragment() {
                     .show()
             }
         }
-
+// TODO : auch nicht fertig
         viewModel.currentUser.observe(viewLifecycleOwner) {
             if (it != null) {
                 findNavController().navigate(R.id.mainFragment)
