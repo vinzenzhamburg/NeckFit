@@ -16,4 +16,32 @@
             android:id="@+id/action_loginFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/themenFragment"
+        android:name="com.example.neckfit.ui.main.ThemenFragment"
+        android:label="ThemenFragment" >
+        <action
+            android:id="@+id/action_themenFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.example.neckfit.ui.main.CategoryFragment"
+        android:label="CategoryFragment" >
+        <action
+            android:id="@+id/action_categoryFragment_to_trainingFragment"
+            app:destination="@id/trainingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trainingFragment"
+        android:name="com.example.neckfit.ui.main.TrainingFragment"
+        android:label="TrainingFragment" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.neckfit.ui.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_themenFragment"
+            app:destination="@id/themenFragment" />
+    </fragment>
 </navigation>

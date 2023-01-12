@@ -1,4 +1,4 @@
-package com.example.neckfit.ui.authentication
+package com.example.neckfit.ui.authhentication
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,25 +10,22 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.neckfit.R
-import com.example.neckfit.databinding.FragmentSignupBinding
+import com.example.neckfit.databinding.FragmentLoginBinding
 import com.example.neckfit.ui.MainViewModel
+import com.example.neckfit.ui.authentication.LoginFragmentDirections
 
+class LoginFragment : Fragment() {
 
-/**
- * SignUpFragment enthält das UI um einen neuen User zu registrieren
- */
-class SignUpFragment : Fragment() {
+    private lateinit var binding: FragmentLoginBinding
 
     private val viewModel: MainViewModel by activityViewModels()
-
-    private lateinit var binding: FragmentSignupBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_signup, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
 
         return binding.root
     }
@@ -36,11 +33,6 @@ class SignUpFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.currentUser.observe(viewLifecycleOwner) {
-            if (it != null) {
-                findNavController().navigate(R.id.mainfragment)
-            }
-        }
 
         viewModel.toast.observe(viewLifecycleOwner) {
             if (it != null) {
@@ -49,17 +41,24 @@ class SignUpFragment : Fragment() {
             }
         }
 
-        binding.signupSignupButton.setOnClickListener {
-            val mail = binding.signupMail.text.toString()
-            val password = binding.signupPassword.text.toString()
-
-            if (!mail.isNullOrEmpty() && !password.isNullOrEmpty()) {
-                viewModel.signUp(mail, password)
+        viewModel.currentUser.observe(viewLifecycleOwner) {
+            if (it != null) {
+                findNavController().navigate(R.id.homeFragment)
             }
         }
 
-        binding.signupCancelButton.setOnClickListener {
-            findNavController().navigateUp()
+        binding.loginButton.setOnClickListener {
+            val email = binding.loginEmailEdit.text.toString()
+            val password = binding.loginPasswordEdit.text.toString()
+
+            if (!email.isNullOrEmpty() && !password.isNullOrEmpty()) {
+                viewModel.login(email, password)
+            }
+        }
+
+        binding.loginSignupButton.setOnClickListener {
+            findNavController()
+                .navigate(LoginFragmentDirections.actionLoginFragmentToSignUpFragment())
         }
     }
 }

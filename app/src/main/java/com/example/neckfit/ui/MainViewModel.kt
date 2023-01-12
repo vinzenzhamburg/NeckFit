@@ -1,7 +1,6 @@
 package com.example.neckfit.ui
 
 import android.app.Application
-import android.content.ContentValues.TAG
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
@@ -9,6 +8,14 @@ import androidx.lifecycle.MutableLiveData
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 
+
+const val TAG = "MainViewModel"
+
+/**
+ * Das MainViewModel kümmert sich um die Kommunikation mit der Firebase Authentication
+ * um einen SHA-1 Key zu generieren einfach folgene Zeilen ins Terminal kopieren
+ * >>keytool -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v -storepass android<<
+ */
 class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     // Kommunikationspunkt mit der FirebaseAuth
@@ -56,3 +63,5 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         _currentUser.value = firebaseAuth.currentUser
     }
 }
+
+

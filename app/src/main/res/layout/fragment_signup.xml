@@ -11,16 +11,32 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:id="@+id/background_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foregroundTint="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/luis_v" />
+
         <TextView
             android:id="@+id/sign_up_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="92dp"
+            android:layout_marginTop="120dp"
             android:fontFamily="@font/days_one"
             android:text="new user"
+            android:textAllCaps="true"
+            android:textColor="#090404"
             android:textSize="30sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,13 +44,15 @@
             android:id="@+id/signup_mail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="68dp"
+            android:layout_marginTop="128dp"
             android:ems="10"
             android:fontFamily="@font/days_one"
             android:hint="email"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
+            android:textColorHint="#DF0B0505"
             app:layout_constraintEnd_toEndOf="@+id/sign_up_title"
+            app:layout_constraintHorizontal_bias="0.487"
             app:layout_constraintStart_toStartOf="@+id/sign_up_title"
             app:layout_constraintTop_toBottomOf="@+id/sign_up_title" />
 
@@ -42,12 +60,13 @@
             android:id="@+id/signup_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="36dp"
             android:ems="10"
             android:fontFamily="@font/days_one"
             android:hint="password"
             android:inputType="textPassword"
             android:minHeight="48dp"
+            android:textColorHint="#1F1919"
             app:layout_constraintEnd_toEndOf="@+id/signup_mail"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/signup_mail"
@@ -57,10 +76,12 @@
             android:id="@+id/signup_signup_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="76dp"
             android:backgroundTint="#070505"
             android:fontFamily="@font/days_one"
             android:text="signup"
+            android:textAllCaps="true"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/signup_password"
             app:layout_constraintTop_toBottomOf="@+id/signup_password" />
 
@@ -71,8 +92,11 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/days_one"
             android:text="cancel"
+            android:textAllCaps="true"
             android:textColor="#050000"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/signup_password"
             app:layout_constraintTop_toTopOf="@+id/signup_signup_button" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

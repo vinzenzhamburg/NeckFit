@@ -1,5 +1,4 @@
 package com.example.neckfit.ui.main
-
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,17 +8,17 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.neckfit.R
-import com.example.neckfit.databinding.FragmentMainBinding
+import com.example.neckfit.databinding.FragmentHomeBinding
 import com.example.neckfit.ui.MainViewModel
 
 
-/**
+/*
  * Das MainFragment ist der Begrüßungsscreen unserer App
  * sollte kein User eingeloggt sein wird man automatisch zum Login weitergeleitet
  */
 class MainFragment : Fragment() {
 
-    private lateinit var binding: FragmentMainBinding
+    private lateinit var binding: FragmentHomeBinding
 
     private val viewModel: MainViewModel by activityViewModels()
 
@@ -30,7 +29,7 @@ class MainFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
 
         return binding.root
     }

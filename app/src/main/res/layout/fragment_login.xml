@@ -12,6 +12,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:id="@+id/background_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/luis_v" />
+
         <TextView
             android:id="@+id/title_text"
             android:layout_width="wrap_content"
@@ -19,7 +29,10 @@
             android:layout_marginTop="116dp"
             android:fontFamily="@font/days_one"
             android:text="Login"
+            android:textAllCaps="true"
+            android:textColor="#050404"
             android:textSize="30sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
@@ -35,6 +48,8 @@
             android:hint="email"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
+            android:textColor="#050101"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/title_text"
             app:layout_constraintHorizontal_bias="0.492"
             app:layout_constraintStart_toStartOf="@+id/title_text"
@@ -50,6 +65,7 @@
             android:hint="password"
             android:inputType="textPassword"
             android:minHeight="48dp"
+            android:textColor="#070000"
             app:layout_constraintEnd_toEndOf="@+id/login_email_edit"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/login_email_edit"
@@ -76,10 +92,15 @@
             android:layout_marginTop="28dp"
             android:fontFamily="@font/days_one"
             android:text="sign up"
-            android:textColor="#050101"
+            android:textAllCaps="true"
+            android:textColor="#33691E"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:iconTint="#2D2F31"
             app:layout_constraintEnd_toEndOf="@+id/login_button"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/login_button"
             app:layout_constraintTop_toBottomOf="@+id/login_button" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

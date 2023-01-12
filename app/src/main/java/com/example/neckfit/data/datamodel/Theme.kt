@@ -1,4 +1,5 @@
 package com.example.neckfit.data.datamodel
 
-class MoveList {
-}
+data class Theme(
+    val name : String
+)
