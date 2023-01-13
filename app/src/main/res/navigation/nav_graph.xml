@@ -10,17 +10,9 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_fragment_home_to_fragment_theme3"
-            app:destination="@id/fragment_theme" />
-        <action
             android:id="@+id/action_fragment_home_to_fragment_theme"
             app:destination="@id/fragment_theme" />
     </fragment>
-    <fragment
-        android:id="@+id/activity_main"
-        android:name="com.example.neckfit.activity_main2"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
     <fragment
         android:id="@+id/fragment_category"
         android:name="com.example.neckfit.fragment_category2"
@@ -48,7 +40,11 @@
         android:id="@+id/loginFragment2"
         android:name="com.example.neckfit.LoginFragment2"
         android:label="fragment_login2"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment2_to_signupFragment2"
+            app:destination="@id/signupFragment2" />
+    </fragment>
     <fragment
         android:id="@+id/signupFragment2"
         android:name="com.example.neckfit.SignupFragment2"
