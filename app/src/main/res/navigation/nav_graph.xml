@@ -3,51 +3,59 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_grafh"
-    app:startDestination="@id/fragment_home">
+    app:startDestination="@id/loginFragment">
     <fragment
         android:id="@+id/fragment_home"
-        android:name="com.example.neckfit.Home"
+        android:name="com.example.neckfit.ui.main.Home"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_fragment_home_to_fragment_theme3"
+            app:destination="@id/fragment_theme" />
         <action
             android:id="@+id/action_fragment_home_to_fragment_theme"
             app:destination="@id/fragment_theme" />
     </fragment>
     <fragment
+        android:id="@+id/activity_main"
+        android:name="com.example.neckfit.ui.main.activity_main"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
         android:id="@+id/fragment_category"
-        android:name="com.example.neckfit.fragment_category2"
+        android:name="com.example.neckfit.ui.main.fragment_category"
         android:label="fragment_category"
-        tools:layout="@layout/fragment_category" >
+        tools:layout="@layout/fragment_category">
         <action
             android:id="@+id/action_fragment_category_to_fragment_training"
             app:destination="@id/fragment_training" />
     </fragment>
     <fragment
         android:id="@+id/fragment_theme"
-        android:name="com.example.neckfit.fragment_theme2"
+        android:name="com.example.neckfit.ui.main.fragment_theme"
         android:label="fragment_theme"
-        tools:layout="@layout/fragment_theme" >
+        tools:layout="@layout/fragment_theme">
         <action
             android:id="@+id/action_fragment_theme_to_fragment_category"
             app:destination="@id/fragment_category" />
     </fragment>
     <fragment
         android:id="@+id/fragment_training"
-        android:name="com.example.neckfit.fragment_training2"
+        android:name="com.example.neckfit.ui.main.fragment_training"
         android:label="fragment_training"
         tools:layout="@layout/fragment_training" />
     <fragment
-        android:id="@+id/loginFragment2"
-        android:name="com.example.neckfit.LoginFragment2"
-        android:label="fragment_login2"
-        tools:layout="@layout/fragment_login" >
+        android:id="@+id/loginFragment"
+        android:name="com.example.neckfit.ui.authentication.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
         <action
-            android:id="@+id/action_loginFragment2_to_signupFragment2"
-            app:destination="@id/signupFragment2" />
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
     </fragment>
     <fragment
-        android:id="@+id/signupFragment2"
-        android:name="com.example.neckfit.SignupFragment2"
-        android:label="fragment_signup2"
-        tools:layout="@layout/fragment_signup" />
+        android:id="@+id/signupFragment"
+        android:name="com.example.neckfit.ui.authentication.SignupFragment"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_signup"/>
 </navigation>
