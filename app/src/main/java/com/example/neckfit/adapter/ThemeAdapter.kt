@@ -8,17 +8,21 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.neckfit.R
-import com.example.neckfit.data.datamodel.Category
+import com.example.neckfit.data.datamodel.Theme
 
 class ThemeAdapter(
     ) : RecyclerView.Adapter<ThemeAdapter.ItemViewHolder>() {
-    private val dataset: List<Category> = emptyList()
+    private var dataset: List<Theme> = emptyList()
+
+    fun submitList(list: List<Theme>){
+        dataset = list
+    }
+
 
     // IDEE EINES VIEWHOLDERS
     // der ViewHolder weiß welche Teile des Layouts beim Recycling angepasst werden
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
-        val name: TextView = view.findViewById(R.id.title_themen)
-        //val teamRecycler: RecyclerView = view.findViewById(R.id.sport_team_recycler)
+        val name: TextView = view.findViewById(R.id.theme_title_name)
     }
 
     // ERSTELLEN DES VIEWHOLDERS
@@ -36,7 +40,7 @@ class ThemeAdapter(
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val theme = dataset[position]
 
-//        holder.name.text = theme.name
+        holder.name.text = theme.name
         //holder.teamRecycler.adapter = TrainingAdapter(sport.teams)
         //holder.teamRecycler.setHasFixedSize(true)
     }

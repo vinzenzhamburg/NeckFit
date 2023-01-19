@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.neckfit.R
-import com.example.neckfit.data.datamodel.Category
 import com.example.neckfit.data.datamodel.Uebung
 
 
@@ -18,7 +17,7 @@ class CategoryAdapter(
     // IDEE EINES VIEWHOLDERS
     // der ViewHolder weiß welche Teile des Layouts beim Recycling angepasst werden
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
-        val name: TextView = view.findViewById(R.id.title_themen)
+        val name: TextView = view.findViewById(R.id.theme_title_name)
     }
 
     // ERSTELLEN DES VIEWHOLDERS

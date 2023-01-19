@@ -17,8 +17,8 @@ class Repository() {
     val exercises: LiveData<List<Uebung>>
         get() = _exercises
 
-    suspend fun loadExercises() {
-        _exercises.value = NeckFitApi.retrofitService.getExercises()
-    }
+//    suspend fun loadExercises() {
+//        _exercises.value = NeckFitApi.retrofitService.getExercises()
+//    }
 }
 

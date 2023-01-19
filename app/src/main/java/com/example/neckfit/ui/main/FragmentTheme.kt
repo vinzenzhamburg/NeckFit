@@ -16,7 +16,6 @@ class FragmentTheme : Fragment() {
 
     private lateinit var binding: FragmentThemeBinding
 
-    private val themeAdapter: ThemeAdapter by lazy { ThemeAdapter() }
 
     private val viewModel: MainViewModel by activityViewModels()
 
@@ -34,15 +33,20 @@ class FragmentTheme : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val themeAdapter = ThemeAdapter()
+
         binding.homeRecycler.adapter= themeAdapter
 
         binding.backButton.setOnClickListener {
             findNavController().navigateUp()
         }
 
-        val themeAdapter = ThemeAdapter()
         binding.homeRecycler.adapter = themeAdapter
+        viewModel.getThemes()
 
-//        viewModel.loading
+        viewModel.themes.observe(viewLifecycleOwner){
+            themeAdapter.submitList(it)
+        }
+
     }
 }
