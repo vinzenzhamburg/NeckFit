@@ -1,6 +1,11 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
 
+    // for Firebase
+    repositories {
+        google()  // Google's Maven repository
+    }
+
 
     ext {
         // Hier werden die Versionnummer der Bibliotheken angegeben

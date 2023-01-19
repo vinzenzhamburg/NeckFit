@@ -7,11 +7,13 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.neckfit.R
 import com.example.neckfit.data.datamodel.Category
+import com.example.neckfit.data.datamodel.Uebung
 
 
 class CategoryAdapter(
-    private val dataset: List<Category>
-) : RecyclerView.Adapter<CategoryAdapter.ItemViewHolder>() {
+
+    ) : RecyclerView.Adapter<CategoryAdapter.ItemViewHolder>() {
+    private val dataset: List<Uebung> = emptyList()
 
     // IDEE EINES VIEWHOLDERS
     // der ViewHolder weiß welche Teile des Layouts beim Recycling angepasst werden
