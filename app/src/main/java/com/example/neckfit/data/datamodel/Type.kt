@@ -1,7 +1,8 @@
 package com.example.neckfit.data.datamodel
 
-data class Category (
+data class Type (
     val name : String,
-//    val Typen : List<>
-        )
+    val exercises : List<Int>
+    )
+
 

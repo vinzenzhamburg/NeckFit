@@ -5,20 +5,36 @@ import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
+import com.example.neckfit.data.Repository
+import com.example.neckfit.data.datamodel.Theme
+import com.example.neckfit.data.datamodel.Uebung
+import com.example.neckfit.data.remote.NeckFitApi
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.storage.FirebaseStorage
+import kotlinx.coroutines.launch
 
 const val TAG = "MainViewModel"
 
-/**
- * Das MainViewModel kümmert sich um die Kommunikation mit der Firebase Authentication
- * um einen SHA-1 Key zu generieren einfach folgene Zeilen ins Terminal kopieren
- * >>keytool -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v -storepass android<<
- */
 class MainViewModel(application: Application) : AndroidViewModel(application) {
+
+    private val repo = Repository()
+
+    private val _themes = MutableLiveData<List<Theme>>()
+    val themes: LiveData<List<Theme>>
+        get() = _themes
+
+    // Kommunikationspunkt mit der Firestore Datenbank
+    private val db = FirebaseFirestore.getInstance()
 
     // Kommunikationspunkt mit der FirebaseAuth
     private val firebaseAuth = FirebaseAuth.getInstance()
+
+    // Kommunikationspunkt mit Firebase Storage
+    private val storage = FirebaseStorage.getInstance()
+    private val storageRef = storage.reference
 
     // currentuser ist null wenn niemand eingeloggt ist
     private val _currentUser = MutableLiveData<FirebaseUser?>(firebaseAuth.currentUser)
@@ -49,6 +65,12 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             .addOnCompleteListener {
                 if (it.isSuccessful) {
                     _currentUser.value = firebaseAuth.currentUser
+                    db.collection("Uebung").document("yB1h7vKlAcpGPowr7f5A").set(
+                        Uebung(
+                            id = 2,
+                            name = "testuebung"
+                        )
+                    )
                 } else {
                     Log.e(TAG, "Login failed: ${it.exception?.message}")
                     _toast.value = it.exception?.message
@@ -60,5 +82,13 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     fun logout() {
         firebaseAuth.signOut()
         _currentUser.value = firebaseAuth.currentUser
+
     }
+    fun getThemes(){
+        viewModelScope.launch{
+            _themes.value = repo.loadThemes()
+        }
+    }
+
+
 }
