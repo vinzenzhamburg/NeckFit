@@ -35,7 +35,7 @@
 
                 <TextView
                     android:id="@+id/category_title_name"
-                    android:layout_width="200dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="25dp"
                     android:layout_marginStart="91dp"
                     android:layout_marginTop="8dp"
