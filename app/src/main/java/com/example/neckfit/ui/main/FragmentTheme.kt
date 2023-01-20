@@ -35,13 +35,13 @@ class FragmentTheme : Fragment() {
 
         val themeAdapter = ThemeAdapter()
 
-        binding.homeRecycler.adapter= themeAdapter
+        binding.themeRecycler.adapter= themeAdapter
 
         binding.backButton.setOnClickListener {
             findNavController().navigateUp()
         }
 
-        binding.homeRecycler.adapter = themeAdapter
+        binding.themeRecycler.adapter = themeAdapter
         viewModel.getThemes()
 
         viewModel.themes.observe(viewLifecycleOwner){
