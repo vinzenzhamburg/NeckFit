@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
@@ -13,25 +12,25 @@
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/homeRecycler"
+            android:id="@+id/allRecycler"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/themen_toolbar"
+            app:layout_constraintTop_toBottomOf="@+id/all_toolbar"
             tools:itemCount="9"
             tools:listitem="@layout/list_item_category" />
 
         <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/themen_toolbar"
+            android:id="@+id/all_toolbar"
             android:layout_width="409dp"
             android:layout_height="wrap_content"
             android:background="@color/black"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
-            app:layout_constraintBottom_toTopOf="@+id/homeRecycler"
+            app:layout_constraintBottom_toTopOf="@+id/allRecycler"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -42,12 +41,12 @@
             android:layout_height="32dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintStart_toStartOf="@+id/themen_toolbar"
+            app:layout_constraintStart_toStartOf="@+id/all_toolbar"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_baseline_arrow_back_ios_new_24" />
 
         <TextView
-            android:id="@+id/themen_title_toolbar"
+            android:id="@+id/all_toolbar_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -57,10 +56,10 @@
             android:textAllCaps="true"
             android:textColor="#FAF8F8"
             android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="@+id/themen_toolbar"
+            app:layout_constraintEnd_toEndOf="@+id/all_toolbar"
             app:layout_constraintHorizontal_bias="0.382"
             app:layout_constraintStart_toEndOf="@+id/backButton"
-            app:layout_constraintTop_toTopOf="@+id/themen_toolbar" />
+            app:layout_constraintTop_toTopOf="@+id/all_toolbar" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

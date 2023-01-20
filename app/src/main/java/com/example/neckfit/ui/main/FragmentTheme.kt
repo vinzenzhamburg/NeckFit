@@ -47,6 +47,9 @@ class FragmentTheme : Fragment() {
         viewModel.themes.observe(viewLifecycleOwner){
             themeAdapter.submitList(it)
         }
+        binding.allButton.setOnClickListener {
+
+        }
 
     }
 }

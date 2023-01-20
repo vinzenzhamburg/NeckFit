@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
@@ -17,17 +16,16 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintBottom_toTopOf="@+id/allButton"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/all_toolbar"
-            tools:itemCount="4"
+            tools:itemCount="9"
             tools:listitem="@layout/list_item_category" />
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/all_toolbar"
-            android:layout_width="match_parent"
+            android:layout_width="409dp"
             android:layout_height="wrap_content"
             android:background="@color/black"
             android:minHeight="?attr/actionBarSize"
@@ -53,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/days_one"
-            android:text="Themen"
+            android:text="All Trainings"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="#FAF8F8"
@@ -62,22 +60,6 @@
             app:layout_constraintHorizontal_bias="0.382"
             app:layout_constraintStart_toEndOf="@+id/backButton"
             app:layout_constraintTop_toTopOf="@+id/all_toolbar" />
-
-        <Button
-            android:id="@+id/allButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="384dp"
-            android:fontFamily="@font/days_one"
-            android:text="Alle Übungen"
-            android:textAllCaps="true"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
