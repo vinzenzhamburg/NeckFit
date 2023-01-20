@@ -6,9 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.neckfit.R
 import com.example.neckfit.data.datamodel.Theme
+import com.example.neckfit.ui.main.FragmentThemeDirections
 
 class ThemeAdapter(
     ) : RecyclerView.Adapter<ThemeAdapter.ItemViewHolder>() {
@@ -22,7 +25,8 @@ class ThemeAdapter(
     // IDEE EINES VIEWHOLDERS
     // der ViewHolder weiß welche Teile des Layouts beim Recycling angepasst werden
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
-        val name: TextView = view.findViewById(R.id.Category_title_name)
+        val name: TextView = view.findViewById(R.id.category_title_name)
+        val themeButton: ConstraintLayout = view.findViewById(R.id.themen_item_Constrain)
     }
 
     // ERSTELLEN DES VIEWHOLDERS
@@ -40,7 +44,10 @@ class ThemeAdapter(
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val theme = dataset[position]
 //TODO: ALLBUTTON Hinzufügen
-
+        holder.themeButton.setOnClickListener {
+            holder.itemView.findNavController()
+                .navigate(FragmentThemeDirections.actionFragmentThemeToFragmentCategory(theme.name))
+        }
         holder.name.text = theme.name
     }
 

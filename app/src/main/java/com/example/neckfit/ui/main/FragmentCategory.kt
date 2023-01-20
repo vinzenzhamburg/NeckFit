@@ -39,10 +39,23 @@ class FragmentCategory : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.homeRecycler.adapter= categoryAdapter
+        val themeTitle = requireArguments().getString("themeTitle")
+        viewModel.themes.observe(viewLifecycleOwner) {
+            val clickedTheme = it.find {
+                it.name == themeTitle
+            }
+            if (clickedTheme != null) {
+                val exercises = clickedTheme.types
+            }
 
-        binding.backButton.setOnClickListener {
-            findNavController().navigateUp()
+
+            binding.homeRecycler.adapter = categoryAdapter
+
+        //    categoryAdapter.submitList()
+
+            binding.backButton.setOnClickListener {
+                findNavController().navigateUp()
+            }
         }
     }
 }

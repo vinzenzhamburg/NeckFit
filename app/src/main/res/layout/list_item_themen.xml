@@ -8,7 +8,7 @@
 
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/theme_item"
+        android:id="@+id/theme_category_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -29,13 +29,14 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/themen_item_Constrain"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#070404">
 
 
                 <TextView
-                    android:id="@+id/Category_title_name"
+                    android:id="@+id/category_title_name"
                     android:layout_width="200dp"
                     android:layout_height="25dp"
                     android:layout_marginStart="91dp"

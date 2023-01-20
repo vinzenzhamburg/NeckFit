@@ -6,22 +6,23 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.neckfit.R
+import com.example.neckfit.data.datamodel.Type
 import com.example.neckfit.data.datamodel.Uebung
 
 
 class CategoryAdapter(
 
     ) : RecyclerView.Adapter<CategoryAdapter.ItemViewHolder>() {
-    private var dataset: List<Uebung> = emptyList()
+    private var dataset: List<Type> = emptyList()
 
-    fun submitList(list : List<Uebung>){
+    fun submitList(list : List<Type>){
         dataset = list
     }
 
     // IDEE EINES VIEWHOLDERS
     // der ViewHolder weiß welche Teile des Layouts beim Recycling angepasst werden
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
-        val name: TextView = view.findViewById(R.id.Category_title_name)
+        val name: TextView = view.findViewById(R.id.category_title_name)
     }
 
     // ERSTELLEN DES VIEWHOLDERS
@@ -38,7 +39,6 @@ class CategoryAdapter(
     // die vom ViewHolder bereitgestellten Parameter werden verändert
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val category = dataset[position]
-
         holder.name.text = category.name
     }
 

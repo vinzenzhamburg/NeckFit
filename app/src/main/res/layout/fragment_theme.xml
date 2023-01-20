@@ -23,7 +23,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/theme_toolbar"
             tools:itemCount="4"
-            tools:listitem="@layout/list_item_category" />
+            tools:listitem="@layout/list_item_themen" />
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/theme_toolbar"
@@ -69,12 +69,13 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="384dp"
+            android:layout_marginBottom="324dp"
             android:fontFamily="@font/days_one"
             android:text="Alle Übungen"
             android:textAllCaps="true"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/themeRecycler"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent" />
