@@ -14,15 +14,15 @@ class ThemeAdapter(
     ) : RecyclerView.Adapter<ThemeAdapter.ItemViewHolder>() {
     private var dataset: List<Theme> = emptyList()
 
-    fun submitList(list: List<Theme>){
+    fun submitList(list : List<Theme>){
         dataset = list
+        notifyDataSetChanged()
     }
-
 
     // IDEE EINES VIEWHOLDERS
     // der ViewHolder weiß welche Teile des Layouts beim Recycling angepasst werden
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
-        val name: TextView = view.findViewById(R.id.theme_title_name)
+        val name: TextView = view.findViewById(R.id.Category_title_name)
     }
 
     // ERSTELLEN DES VIEWHOLDERS
@@ -39,10 +39,9 @@ class ThemeAdapter(
     // die vom ViewHolder bereitgestellten Parameter werden verändert
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val theme = dataset[position]
+//TODO: ALLBUTTON Hinzufügen
 
         holder.name.text = theme.name
-        //holder.teamRecycler.adapter = TrainingAdapter(sport.teams)
-        //holder.teamRecycler.setHasFixedSize(true)
     }
 
     // damit der LayoutManager weiß wie lang die Liste ist

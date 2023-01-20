@@ -1,0 +1,397 @@
+[
+  {
+    "id": 1,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/01.png",
+    "description": "Im Stehen oder im Sitzen - Dehnen Sie seitlich den Hals, indem Sie den Kopf mithilfe der Hand zu einer Seite neigen. 10 Sec. jede Seite"
+  },
+  {
+    "id": 2,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/02.png",
+    "description": "Im Stehen oder im Sitzen - Umfassen Sie mit den Händen den Hinterkopf über den Nacken. Bewegen Sie den Kopf nach unten, ohne Rumpf zu bewegen, bis das Kinn Die Brust berührt. 20 Sek. lang"
+  },
+  {
+    "id": 3,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/03.png",
+    "description": "Im Stehen oder im Sitzen - Legen Sie eine auf die Stirn und bewegen Sie den Kopf leicht nach hinten. Bewegen Sie Den Kopf soweit nach hinten wie es geht, ohne den BrustKorb zu bewegen. 5 Sek. halten"
+  },
+  {
+    "id": 4,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/04.png",
+    "description": "Belastungsübung des Halses - Legen Sie die Hand auf eine Seite des Kopfes und drücken Sie gegen diesen, gleichzeitig drücken Sie die andere Seite des Kopfes gegen die Hand. Behalten Sie die Kopfposition. 10 Sek. jede Seite"
+  },
+  {
+    "id": 5,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/05.png",
+    "description": "Belastungsübung des Halses - Legen Sie die Häne an die Stirn und drücken Sie diese nach hinten, gleichzeitig drücken Sie den Kopf gegen die Hände. Behalten Sie die Kopfposition. 10 Sek. halten."
+  },
+  {
+    "id": 6,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/06.png",
+    "description": "Belastungsübung des Halses - Legen Sie die Hände hinter den Kopf und drücken ihn nach vorne, gleichzeitig drücken Sie denkopf nach hinten gegen die Hände. Behalten Sie die Kopfposition. 10 Sek. halten."
+  },
+  {
+    "id": 7,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/07.png",
+    "description": "Belastungsübung des Halses - Spannen Sie die vorderen Halsmuskeln direkt unter dem kinn an. Versuchen Sie den Kopf und den Kiefer nicht zu bewegen. 10 mal 3 Sek. halten."
+  },
+  {
+    "id": 8,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/08.png",
+    "description": "Belastungsübung des Rückens - Mit den Händen auf der Brust heben Sie die Ellenbogen bis Schulterhöhe, entspannen Sie die Schultern und bewegen Sie die Ellenbogen zusammen mit dem Schulterblättern nach hinten. 10 mal 3 Sek."
+  },
+  {
+    "id": 9,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/09.png",
+    "description": "Im Stehen oder im Sitzen - Mit leicht gespreizten Beinen neigen Sie den Körper seitlich und fassen mit einer Hand den Ellenbogen an. 10Sek. jede Seite"
+  },
+  {
+    "id": 10,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/10.png",
+    "description": "Im Stehen oder im Sitzen - Greifen Sie die Hände ineinander un sstrecken Sie die Arme nach oben, als ob Sie die decke berühren. 20 Sek."
+  },
+  {
+    "id": 11,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/11.png",
+    "description": "Beugen Sie den Kopf leicht auf eine Seite und atmen Sie langsam ein und aus. 3 mal 5 Sek."
+  },
+  {
+    "id": 12,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/12.png",
+    "description": "Im Stehen oder im Sitzen - Mit dem Beinen leicht geöffnet dehnen Sie bitte abwechselnd die Arme und versuchen eine Hand weiter nach oben zu strecken als die andere. 2 mal 5 sek. jede Seite."
+  },
+  {
+    "id": 13,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/13.png",
+    "description": "Legen Sie die Arme an den Hinterkopf und atmen Sie Langsam ein und aus. 3 mal 5 Sek."
+  },
+  {
+    "id": 14,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/14.png",
+    "description": "Halten Sie die Fusszehen gut zusammen, stützen Sie sich mit diesen auf dem Boden ab und heben Sie die Fersen. 3 mal 5 Sek."
+  },
+  {
+    "id": 15,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/15.png",
+    "description": "Heben Sie die Arme und Hände soweit es geht und recken Sie  die Zehenspitzen. 5 Sek."
+  },
+  {
+    "id": 16,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/16.png",
+    "description": "Spreizen Sie die Beine leicht und dehnen Sie die Arme. Drehen Sie sie zu einer Seite und dann zur anderen. 10 sek. jede Seite."
+  },
+  {
+    "id": 17,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/17.png",
+    "description": "Spreizen Sie leicht die Beine und dehnen Sie die Arme. Lehnen Sie sich auf eine Seite und dann auf die andere. 10 Sek. jede Seite."
+  },
+  {
+    "id": 18,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/18.png",
+    "description": "Spreizen sie die Beine leicht und legen  Sie die Hände auf die Hüfte. Beugen Sie den Rücken, die Schultern und den Kopf nach hinten. 10 Sek."
+  },
+  {
+    "id": 19,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/19.png",
+    "description": "Im Stehen oder im Sitzen - Mit den Armen über dem Kopf halten Sie den Ellenbogen mit der Hand des anderen Armes fest. Langsam ziehen Sie den Ellenbogen in Richtung Nacken. 15 Sek. jeder Arm."
+  },
+  {
+    "id": 20,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/20.png",
+    "description": "Im Stehen oder im Sitzen - Mit gestreckten Armen, eng anliegend am Körper, heben Sie die Arme. 2 mal 5 Sek. jedesmal."
+  },
+  {
+    "id": 21,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/21.png",
+    "description": "Bewegen Sie die Schultern nach oben, dann nac unten und anschließend nach vorne in kreisenden Bewegungen. Wiederholen Sie die Übung andersherum. 10 mal Schultern im Uhrzeigersinn und gegen dem Uhrzeigersinn."
+  },
+  {
+    "id": 22,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/22.png",
+    "description": "Im Stehen oder im Sitzen - Kreuzen Sie ein Handgelenk über das andere und umfassen Sie die Hände. Dehnen Sie die Arme bis sich die Hände über dem kopf befinden und anschließend nach hinten. 15 Sek."
+  },
+  {
+    "id": 23,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/23.png",
+    "description": "Im Stehen oder im Sitzen - Legen Sie den Arme über den anderen und dehnen Sie Ihn. Nehmen Sie die andere Hand zur Hilfe. 15 Sek. jeder arm."
+  },
+  {
+    "id": 24,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/24.png",
+    "description": "Heben Sie die Hände und positionieren Sie diese in einem 90-Grad-Winkel, die Ellenbogen nach unten. Von dieser Position aus bewegen Sie die Ellenbogen nach hinten. 10 Sek."
+  },
+  {
+    "id": 25,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/25.png",
+    "description": "Fügen Sie die Hände ineinander, die Handflächen nach innen und dehnen Sie die Arme nach vorne. 15 Sek."
+  },
+  {
+    "id": 26,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/26.png",
+    "description": "Im Stehen oder im Sitzen - Gehen Sie mit einem Arm nach hinten und beugen Sie Ihn. Beugen Sie auch den anderen Arm und gehen Sie mit Ihm hinter dem Kopf. Sie umgreifen die Finger beider Hände. Ziehen Sie beide Hände in entgegen gesetzte Richtungen. 10 Sek. jeder arm"
+  },
+  {
+    "id": 27,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/27.png",
+    "description": "Umfassen Sie die Hände und drehen Sie die Handgelenke in beide Richtungen. 15 mal jede Hand im Uhrzeigersinn und Gegen den Uhrzeiegersinn"
+  },
+  {
+    "id": 28,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/28.png",
+    "description": "Im Stehen - Mit dem gestreckten Arm waagerecht und mit gedrehten Körper halten wir uns an einer Säule fest und drehen den Rumpf zum Dehnen. 15 Sek. jeder Arm"
+  },
+  {
+    "id": 29,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/29.png",
+    "description": "Im Stehen - Stellen Sie sich vor eine Säule. Stützen Sie die Hand und den Unterarm an dieser ab. Stellen Sie das Bein der gleichen Seite nach hinten und halten Sie es gerade.Stellen Sie das andere Bein leicht nach vorne und beugen Sie es. Drehen Sie dden Oberkörper weg von der Säule. 15 Sek. jeder Arm"
+  },
+  {
+    "id": 30,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/30.png",
+    "description": "Im Stehen - Stellen Sie sich vor eine Wand, wo Sie sich mit dem Unterarm abstützen können, der kopf ruht auf den Händen. Beugen Sie ein Bein etwas nach vorne, während Sie das andere nach hinten dehnen. Dann bewegen Sie langsam die Hüfte nach vorne und halten den unteren Teil des Rücken gerade.Auf dem Boden lassen Sie das Bein gestreckt, die Zehen zeigen nach vorne oder ein wenig nach innen. 30 Sek. jedes Bein."
+  },
+  {
+    "id": 31,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/31.png",
+    "description": "Zum Dehnen des Quadrizeps und des Knies halten Sie den hinteren Teil des Fußes mit der Hand fest und ziehen Sie ihn langsam Richtung Gesäß. 30 Sek. jedes Bein."
+  },
+  {
+    "id": 32,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/32.png",
+    "description": "Stellen Sie das Fußende aud eine höhere Oberfläche. Lassen Sie das andere Bein unten und der fuß zeigt nach vorne. Danach beugen Sie das Knie des oberen Beines, während Sie mit der Hüfte nach vorne gehen. 25 Sek. jedes Bein."
+  },
+  {
+    "id": 33,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/33.png",
+    "description": "Im Sitzen - Mit geraden Beinen leicht auseinder beugen Sie den Körper und Stüzen Sie die gedehnten Arme ab. Zum Dehnen bewegen Sie den Körper nach unten. 30 Sek."
+  },
+  {
+    "id": 34,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/34.png",
+    "description": "Im Stehen - Mit gespreizten Beinen, die Arme auf der Hüfte abgestützt, drehen Sie den Oberkörper auf eine Seite. 10 Sek. jede Seite."
+  },
+  {
+    "id": 35,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/35.png",
+    "description": "Im Stehen - Mit gespreizten Beinen, die Hände am Rücken abgestützt, bewegen Sie die Taille nach vorne. 15 Sek."
+  },
+  {
+    "id": 36,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/36.png",
+    "description": "Fügen Sie die Fimger hinter dem Rücken ineinander. Drehen Sie langsam die Ellenbogen nach innen, während Sie die Arme dehnen. Heben Sie die Arme hintenherum bis Sie die Dehnung der Schultern, der Brust oder der Arme spüren. Strecken Sie die Brust heraus und das kinn nach unten. 15 Sek."
+  },
+  {
+    "id": 37,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/37.png",
+    "description": "Im Stehen - Beugen Sie die Knie und versuchen Sie den Körper aufrecht zu halten. 30 Sek."
+  },
+  {
+    "id": 38,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/38.png",
+    "description": "Begen Sie und drücken Sie das Bein gegen die Brust, wo sie den Schmerz fühlen (Blähung), atmen Sie ein und anschließend atmen Sie tief aus. 3 mal 5 Sek."
+  },
+  {
+    "id": 39,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/39.png",
+    "description": "Aufrechte Position - Beugen Sie den Rücken, um die Fußspitzen zu berühren und beugen Sie leicht die Knie. 20 Sek."
+  },
+  {
+    "id": 40,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/40.png",
+    "description": "In Position Kniebeugen - Der obere Bereich des Rumpfes berührt die Oberschenkel und die Hände werden mit den Handflächen auf dem Boden abgestützt. Aus dieser Position werden die Knie gedehnt bis man die Spannung in den gebeugten Beinen spürt. 20Sek."
+  },
+  {
+    "id": 41,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/41.png",
+    "description": "Im Stehen - Wir legen ein gestrecktes Bein seitlich auf eine Stufe. Zur Dehnung beugen wir den Rumpf auf diese Seite. 20 Sek. jedes Bein."
+  },
+  {
+    "id": 42,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/42.png",
+    "description": "Im Stehen - Mit einem Bein leicht nach vorne drehen Sie den oberen Teil der Zehen stützen Sie auf dem Boden ab. Drücken Sie die Zehen mit Hilfe des Körpergewichts nach unten. 10 Sek. jeder Fuß."
+  },
+  {
+    "id": 43,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/43.png",
+    "description": "Gehen Sie mit einem Bein nach vorne in die Knie bis sich Ihr Knie genau über dem Fußknöchel befindet, das andere Knie legen Sie auf dem Boden ab. Senken Sie ein wenig die Hüfte bis man eine leichte Dehnung im vorderen Bereich der Hüfte, dr Oberschenkelmuskulatur und in der Leist spürt. Das Knie, das sich über dem Füßknöchel befindet, darf nicht nach vorne gehen. 20 Sek jedes Bein."
+  },
+  {
+    "id": 44,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/44.png",
+    "description": "Im Stehen - Mit gespreizten Beinen beugen Sie ein Bein und bewegen Sie den Körper auf eine Seite. 10 Sek. jedes Bein."
+  },
+  {
+    "id": 45,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/45.png",
+    "description": "Auf den Knien - Stützen Sie sich mit den Händen auf dem Boden ab und setzen Sie die Fußzehen auf den Boden. Bewegen Sie das Gesäß nach hinten und nach unten. 20 Sek."
+  },
+  {
+    "id": 46,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/46.png",
+    "description": "Auf den Knien - Wir stützen uns mit dem Unterarm auf dem Boden ab, strecken den anderen Arm und stützen die Hand auf dem Boden ab. Mit der Hand auf dem Boden bewegen wir den Körper nach hinten. 10 Sek. jeder Arm."
+  },
+  {
+    "id": 47,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/47.png",
+    "description": "Im Sitzen - Setzen Sie sich auf die Fersen und senken Sie die Schulten als wenn Sie sie auf den Boden legen möchten. 10 Sek."
+  },
+  {
+    "id": 48,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/48.png",
+    "description": "Gehen Sie auf allen vieren und dehnen Sie einen Arm einer Seite und gleichzeitig dehnen Sie einen Arm einer Seite und gleichzeitig dehnen Sie das Bein der anderen Seite. Wiederholen Sie diese Schritte andersherum. 5 Sek. jede Seite."
+  },
+  {
+    "id": 49,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/49.png",
+    "description": "Auf den Knien - Mit gestreckten Armen, die Hände abgestützt auf dem Boden und mit gedrehtem Handgelenk bewegen wir den Körper zum Dehnen nach Hinten. 20 Sek."
+  },
+  {
+    "id": 50,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/50.png",
+    "description": "Auf den Knien - Halten Sie die Beine zusammen. Stützen Sie sich mit geraden Armen nach hinten ab ohne den Rücken zu biegen. Stützen Sie das Gesäß auf den Fersen ab und halten Sie diese Position neben den Oberschenkeln, die Fußspitzen zeigen nach hinten. Währendessen beugen Sie sich nach hinten, spannen die Gesäßmuskeln an und drehen das Becken. Vermeiden Sie in jdem Moment, dass die Knie sich vom Boden heben oder sich voneinander distanzieren, die füße gehen nicht auseinander. 20 Sek."
+  },
+  {
+    "id": 51,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/51.png",
+    "description": "in der Hocke - Wir stützen uns mit den Beinen gut ab. Die Fersen gehen circa 10 bis 30 Zentimeter auseinander. Diese Position eignet sich ausgezeichnet zum Dehnen der vorderen Bereiche der Beine, Knie, Knöchel, Rücken, Achillessehnen und Leisten. Die Knie befinden sich außerhalb der Schultern in der Senkrechten der Füßzehen. Wenn wir ein Gleichgewichtsproblem haben, können wir in der Hocke sitzen und den Rücken gegen die Wand abstützen oder uns mit dem Händen festhalten. 30 Sek."
+  },
+  {
+    "id": 52,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/52.png",
+    "description": "Im Sitzen - Die Beien Sind gebeugt und die Fußballen zusammen. Berühren Sie die üße und beugen Sie Ihren Oberkörper nach vorne. 30 Sek."
+  },
+  {
+    "id": 53,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/53.png",
+    "description": "Im Liegen - Mit gebeugten Beinen und Aufeinanderliegenden Fußballen versuchen Sie die Beine offenzuhalten. 30 Sek."
+  },
+  {
+    "id": 54,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/54.png",
+    "description": "Im Liegen - Mit gebeugten Beinen und Knien leicht auseinander heben Sie den Kopf und lassen den Rücken auf dem Boden.Sie können die Arme zur Hilfe nehmen. 3 mal 5 Sek."
+  },
+  {
+    "id": 55,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/55.png",
+    "description": "Im Liegen - Beugen Sie die Beine und legen Sie die Hände an den Nacken. Dehnen Sie die Ellenbogen. 2 mal 5 Sek."
+  },
+  {
+    "id": 56,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/56.png",
+    "description": "im Sitzen auf dem Boden, die Knien sind leicht gebeugt- Umgreifen Sie die Oberschenkel und fassen Sie mit den Händen unter die Knie. Beugen Sie sich nach vorne und gehen Sie mit den Oberschenkeln nach hinten. Die Füße bleiben gestreckt und die Fersen auf dem Boden. 20 Sek."
+  },
+  {
+    "id": 57,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/57.png",
+    "description": "Im Sitzen - Mit gestrecken Beinen beugen beugen Sie sich nach vorne und halten Sie die Füße mit dem Händen fest. Ziehen Sie die Füße mit den Händen fest. Ziehen Sie Füße in Richtung Rumpf nach hinten. 20 Sek."
+  },
+  {
+    "id": 58,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/58.png",
+    "description": "im sitzen - Mit einen gestreckten Bein, das andere gebeugt, wird deer Fuß neben die Außenseite des gestreckten Beines positioniert. Nehmen Sie die Hände zm Dehnen zur Hilfe. 20 Sek. jedes Bein"
+  },
+  {
+    "id": 59,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/59.png",
+    "description": "Im Sitzen mit geradem und gestrecktem Bein. Beugen Sie das linke Bein und heben Sie es über das rechte, um den linken Fuß an der Außenseite neben dem Knie abzustellen. Danach beugen Sie den rechten Arm und platzieren den Ellenbogen an der Außenseite des linken Oberschenkels über dem Knie. Während dieser Dehnung benutzen Sie bitte den rechten Ellenbogen und lassen Sie das linke Hand hinter <Ihnen abgestützt drehen Sie Kopf leicht, um über die linke Schulter sehen zu können. Zugleich drehen Sie den Oberkörper Richtung Arm und Linke Hand. 15 Sek. jede Seite."
+  },
+  {
+    "id": 60,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/60.png",
+    "description": "Im Sitzen - Stützen Sie sich mit dem Armen hinten ab und beugen Sie ein Bein nach hinten. Das andere wird auch gebeugt und berührt mit den Fussballen das andere Bein. Bewegen Sie sich zum Dehnen nach hinten., 15 Sek. jedes Bein."
+  },
+  {
+    "id": 61,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/61.png",
+    "description": "Im Sitzen - Machen Sie Kreisbewegungen mit dem Fußknöchel in eine Richtung und anschließend in die andere und ziehen Sie sie mit Hilfe der Hand die Brust. 15 mal jeder Fuß Uhrzeigersinn und Gegen Uhrzeigersinn."
+  },
+  {
+    "id": 62,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/62.png",
+    "description": "Im Sitzen - Machen Sie kreisende Bewegungen mit den Fußknöcheln in beide Richtungen. 15 mal jeder Fuß Uhrzeigersinn und Gegen Uhrzeigersinn."
+  },
+  {
+    "id": 63,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/63.png",
+    "description": "Im Sitzen - Die Hände werden hinten abgestützt, ein Bein wird nach hinten gebeugt und das gebeugt und das andere wird auch gebeugt. Die Fußsohle berührt das andere Knie. Zum Dehnen gehen Sie bitte mit Ihrem Körper nach hinten. 20 Sek. jedes Bein."
+  },
+  {
+    "id": 64,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/64.png",
+    "description": "Im Sitzen - Strecken Sie ein Bein und beugen Sie das andere. Die füßsohle berührt den Oberschenkel. Gehen Sie mit Ihrem Oberkörper nach vorne berühren Sie mit den Händen den Füßknöchel. 20 Sek. jedes Bein."
+  },
+  {
+    "id": 65,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/65.png",
+    "description": "im Sitzen - Mit gestreckten und geöffneten Beinen Stützen Sie Sich mit den Händen ab und bewegen den Körper nach vorne. 30 Sek."
+  },
+  {
+    "id": 66,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/66.png",
+    "description": "Im Sitzen - Setzen Sie sich auf den Boden und öffnen Sie weit die Beine. Bewegen Sie den Oberkörper zu einem der Beine und dehnen Sie ihn, indem Sie Füße mit der Hand berühren. 15 Sek. jede Seite."
+  },
+  {
+    "id": 67,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/67.png",
+    "description": "Setzen Sie sich mit geradem und aufrechtem Rücken gegen eine Wand auf den Boden und lassen ein Bein gestreckt. Beugen Sie das andere Bein und heben Sie den Knöchel mit Hilfe der Hand des gestreckten Beins in Richtung Brust. Mit dem Ellenbogen der entsprechenden Hand des gebeugten Beines halten Sie das Knie fest. Heben Sie den Fuß in Richtung der gegenüberliegenden Schulter."
+  },
+  {
+    "id": 68,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/68.png",
+    "description": "In liegerder Position - Umfassen Sie die Oberschenkel mit den Händen fest hinter den Knien. Die Knie sind über der Brust gebeugt. Heben Sie die Fersen in Richtung Gesäß und anschließend heben Sie die Knie in Richtung Brust. Dann heben Sie die Hüfte vom Boden. In dieser Position dehnen Sie Beine, um Muskelkrämpfe und mögliche Schmerzen zu vermeiden. 20 Sek."
+  },
+  {
+    "id": 69,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/69.png",
+    "description": "Im Liegen - Dehnen Sie die Arme und Beugen Sie ein Bein. Danach drehen Sie die Hüfte ohne die Schultern vom Boden zu heben. Sie können sich mit dem Armen abstützen. 25 Sek. jede Seite."
+  },
+  {
+    "id": 70,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/70.png",
+    "description": "Auf der rechten Seite liegend - Mit dem inneren gestreckten Bein beugen Sie das andere nach hinten und stützen Sie sich mit dem Arm ab. 10 Sek jedes Bein."
+  },
+  {
+    "id": 71,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/71.png",
+    "description": "Im Liegen - Mit den Händen hinter dem Kopf, den Rücken auf dem Boden, die Beine leicht gebeugt drehen Sie Hüfte auf eine Seite und Bein das andere. 25 Sek. jede Seite."
+  },
+  {
+    "id": 72,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/72.png",
+    "description": "Im Liegen - Mit gestrecktem Körper beugen Sie die Beine über die Brust und nehmen die Arme zur Hilfe. 20 Sek. jedes Bein."
+  },
+  {
+    "id": 73,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/73.png",
+    "description": "Im Liegen - Beugen Sie ein Bein und heben und dehnen Sie das andere. Sie dehnen das Bein, indem Sie es Richtung Kopf bewegen. 10 Sek. jedes Bein."
+  },
+  {
+    "id": 74,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/74.png",
+    "description": "Legen Sie ein Bein auf einen Stuhl oder ahnlichem. Beugen Sie den Körper nach vorne. 15 Sek. jedes Bein."
+  },
+  {
+    "id": 75,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/75.png",
+    "description": "Im Stehen - Stützen Sie sich an der Wand ab. Senken Sie die Hüfte leicht, wärend Sie die Knie ein wenig beugen. Denken Sie daran den hinteren Fuß auf dem Boden zu lassen. Während der Dehnung muss der Fuß nach vorne oder nach innen zeigen. Behalten Sie die Ferse unten. 10 Sek. jedes Bein."
+  },
+  {
+    "id": 76,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/76.png",
+    "description": "Im Stehen - Spreizen Sie leicht Beine und berühren Sie die Fußspitze, das andere Bein leicht gebeugt. 15 Sek. jedes Bein."
+  },
+  {
+    "id": 77,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/77.png",
+    "description": "Im Stehen - Halten Sie sich am Geländer oder ahnlichem fest und legen Sie ein Bein über das andere Knie. Lehnen Sie sich nach hinten und dehnen Sie die Hüfte des Beines,das auf dem Knie liegt."
+  },
+  {
+    "id": 78,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/78.png",
+    "description": "Im Stehen - Spreizen Sie die Beine umd beugen Sie sie leicht. Berühren Sie die inneren Fußknöchel. Ohne sie loszulassen dehnen Sie den Rücken nach hinten. 10 Sek."
+  },
+  {
+    "id": 79,
+    "image": "https://public.syntax-institut.de/apps/batch4/Vinzenz/images/79.png",
+    "description": "Im Liegen - Legen Sie den Rücken auf den Boden und die Beien gebeugt auf einen Stuhl. Entspannen Sie sich. 100Sek."
+  }
+]

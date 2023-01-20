@@ -26,6 +26,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val themes: LiveData<List<Theme>>
         get() = _themes
 
+    private val _exercises = MutableLiveData<List<Uebung>>()
+    val exercises: LiveData<List<Uebung>>
+        get() = _exercises
+
     // Kommunikationspunkt mit der Firestore Datenbank
     private val db = FirebaseFirestore.getInstance()
 
@@ -65,12 +69,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             .addOnCompleteListener {
                 if (it.isSuccessful) {
                     _currentUser.value = firebaseAuth.currentUser
-                    db.collection("Uebung").document("yB1h7vKlAcpGPowr7f5A").set(
-                        Uebung(
-                            id = 2,
-                            name = "testuebung"
-                        )
-                    )
                 } else {
                     Log.e(TAG, "Login failed: ${it.exception?.message}")
                     _toast.value = it.exception?.message
@@ -81,12 +79,17 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun logout() {
         firebaseAuth.signOut()
-        _currentUser.value = firebaseAuth.currentUser
+            _currentUser.value = firebaseAuth.currentUser
 
     }
     fun getThemes(){
         viewModelScope.launch{
             _themes.value = repo.loadThemes()
+        }
+    }
+    fun getExercises(){
+        viewModelScope.launch {
+            _exercises.value = repo.loadExercises()
         }
     }
 

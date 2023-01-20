@@ -12,12 +12,16 @@ import com.example.neckfit.data.datamodel.Uebung
 class CategoryAdapter(
 
     ) : RecyclerView.Adapter<CategoryAdapter.ItemViewHolder>() {
-    private val dataset: List<Uebung> = emptyList()
+    private var dataset: List<Uebung> = emptyList()
+
+    fun submitList(list : List<Uebung>){
+        dataset = list
+    }
 
     // IDEE EINES VIEWHOLDERS
     // der ViewHolder weiß welche Teile des Layouts beim Recycling angepasst werden
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
-        val name: TextView = view.findViewById(R.id.theme_title_name)
+        val name: TextView = view.findViewById(R.id.Category_title_name)
     }
 
     // ERSTELLEN DES VIEWHOLDERS

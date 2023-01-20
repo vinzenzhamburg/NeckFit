@@ -1,5 +1,6 @@
 package com.example.neckfit.data.datamodel
 
+import com.squareup.moshi.Types
 
 
 data class Theme (
