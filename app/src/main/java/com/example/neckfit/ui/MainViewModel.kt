@@ -8,8 +8,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.neckfit.data.Repository
 import com.example.neckfit.data.datamodel.Theme
+import com.example.neckfit.data.datamodel.Training
 import com.example.neckfit.data.datamodel.Uebung
-import com.example.neckfit.data.remote.NeckFitApi
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
@@ -29,6 +29,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     private val _exercises = MutableLiveData<List<Uebung>>()
     val exercises: LiveData<List<Uebung>>
         get() = _exercises
+
+    private val _allTraining = MutableLiveData<List<Training>>()
+    val allTraining: LiveData<List<Training>>
+        get() = _allTraining
 
     // Kommunikationspunkt mit der Firestore Datenbank
     private val db = FirebaseFirestore.getInstance()
@@ -82,16 +86,25 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             _currentUser.value = firebaseAuth.currentUser
 
     }
+
     fun getThemes(){
         viewModelScope.launch{
             _themes.value = repo.loadThemes()
         }
     }
+
     fun getExercises(){
         viewModelScope.launch {
             _exercises.value = repo.loadExercises()
         }
     }
+
+    fun getAllTraining(){
+        viewModelScope.launch {
+            _allTraining.value = repo.loadAllTraining()
+        }
+    }
+
 
 
 }

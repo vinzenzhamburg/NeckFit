@@ -32,7 +32,7 @@ class FragmentTraining : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.backButton.setOnClickListener {
+        binding.backButtonTraining.setOnClickListener {
             findNavController().navigateUp()
         }
     }

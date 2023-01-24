@@ -60,7 +60,7 @@ class FragmentCategory : Fragment() {
 
 
 
-            binding.backButton.setOnClickListener {
+            binding.backButtonTraining.setOnClickListener {
                 findNavController().navigateUp()
             }
         }

@@ -1,6 +1,7 @@
 package com.example.neckfit.data.remote
 
 import com.example.neckfit.data.datamodel.Theme
+import com.example.neckfit.data.datamodel.Training
 import com.example.neckfit.data.datamodel.Uebung
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -29,6 +30,8 @@ interface NeckFitApiService {
     suspend fun getThemes(): List<Theme>
     @GET("exercises.json")
     suspend fun getExercises(): List<Uebung>
+    @GET("exercises.json")
+    suspend fun getAllTraining(): List<Training>
 
 }
 

@@ -38,7 +38,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/backButton"
+            android:id="@+id/backButtonTraining"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_marginStart="16dp"
@@ -63,7 +63,7 @@
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="@+id/theme_toolbar"
             app:layout_constraintHorizontal_bias="0.382"
-            app:layout_constraintStart_toEndOf="@+id/backButton"
+            app:layout_constraintStart_toEndOf="@+id/backButtonTraining"
             app:layout_constraintTop_toTopOf="@+id/theme_toolbar" />
 
         <Button
