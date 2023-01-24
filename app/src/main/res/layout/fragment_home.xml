@@ -11,16 +11,32 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:id="@+id/home_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="matrix"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/wolken" />
+
         <Button
             android:id="@+id/logout_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
             android:backgroundTint="#070404"
             android:fontFamily="@font/days_one"
+            android:shadowColor="#969595"
+            android:shadowDy="10"
+            android:shadowRadius="10"
             android:text="logout"
             android:textAllCaps="true"
+            android:textColor="#979696"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -30,7 +46,7 @@
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/Toolbar"
-            android:layout_width="409dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@color/black"
             android:minHeight="?attr/actionBarSize"
@@ -41,13 +57,18 @@
 
         <TextView
             android:id="@+id/title_toolbar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="195dp"
+            android:layout_height="53dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/days_one"
+            android:outlineProvider="none"
+            android:shadowColor="#D5D5D5"
+            android:shadowDy="25"
+            android:shadowRadius="25"
             android:text="Neckfit"
+            android:textAlignment="center"
             android:textAllCaps="true"
-            android:textColor="#F3F1F1"
+            android:textColor="#FCFCFC"
             android:textSize="34sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -61,12 +82,15 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="16dp"
             android:backgroundTint="#070505"
             android:fontFamily="@font/days_one"
+            android:shadowColor="#2F81B0"
+            android:shadowDy="10"
+            android:shadowRadius="10"
             android:text="Start"
             android:textAllCaps="true"
-            android:textColor="#388E3C"
+            android:textColor="#2E83B1"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/logout_button"
@@ -83,23 +107,6 @@
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Toolbar" />
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="409dp"
-            android:layout_height="wrap_content"
-            app:cardBackgroundColor="#00FFFFFF"
-            app:layout_constraintBottom_toTopOf="@+id/start_button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/homeText">
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="302dp"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/neckfit_image" />
-        </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

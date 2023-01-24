@@ -18,7 +18,6 @@
             android:layout_marginTop="120dp"
             android:fontFamily="@font/days_one"
             android:shadowColor="#706E6E"
-            android:shadowDx="25"
             android:shadowDy="25"
             android:shadowRadius="25"
             android:text="new user"

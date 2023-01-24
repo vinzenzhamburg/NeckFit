@@ -37,13 +37,16 @@
 
                 <TextView
                     android:id="@+id/category_title_name"
-                    android:layout_width="200dp"
-                    android:layout_height="25dp"
+                    android:layout_width="202dp"
+                    android:layout_height="27dp"
                     android:layout_marginStart="91dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="88dp"
                     android:layout_marginBottom="8dp"
                     android:fontFamily="@font/days_one"
+                    android:shadowColor="#F4F5F5"
+                    android:shadowDy="10"
+                    android:shadowRadius="10"
                     android:text="hint"
                     android:textAlignment="center"
                     android:textAllCaps="true"

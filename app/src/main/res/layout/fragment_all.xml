@@ -49,9 +49,12 @@
         <TextView
             android:id="@+id/all_toolbar_text"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="46dp"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/days_one"
+            android:shadowColor="#B8B7B7"
+            android:shadowDy="25"
+            android:shadowRadius="25"
             android:text="All Trainings"
             android:textAlignment="center"
             android:textAllCaps="true"

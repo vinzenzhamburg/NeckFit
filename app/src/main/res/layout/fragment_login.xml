@@ -19,7 +19,6 @@
             android:layout_marginTop="112dp"
             android:fontFamily="@font/days_one"
             android:shadowColor="#9A000000"
-            android:shadowDx="25"
             android:shadowDy="25"
             android:shadowRadius="25"
             android:text="Login"
