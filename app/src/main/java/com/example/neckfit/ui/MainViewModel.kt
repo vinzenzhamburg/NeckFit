@@ -104,7 +104,4 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             _allTraining.value = repo.loadAllTraining()
         }
     }
-
-
-
 }

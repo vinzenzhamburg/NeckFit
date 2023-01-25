@@ -38,7 +38,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/backButtonTraining"
+            android:id="@+id/backButtonTheme"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_marginStart="16dp"
@@ -53,9 +53,9 @@
             android:layout_height="45dp"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/days_one"
-            android:shadowColor="#F9F7F7"
-            android:shadowDy="25"
-            android:shadowRadius="25"
+            android:shadowColor="#0091EA"
+            android:shadowDy="15"
+            android:shadowRadius="15"
             android:text="Themen"
             android:textAlignment="center"
             android:textAllCaps="true"
@@ -63,7 +63,7 @@
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="@+id/theme_toolbar"
             app:layout_constraintHorizontal_bias="0.382"
-            app:layout_constraintStart_toEndOf="@+id/backButtonTraining"
+            app:layout_constraintStart_toEndOf="@+id/backButtonTheme"
             app:layout_constraintTop_toTopOf="@+id/theme_toolbar" />
 
         <Button
@@ -74,7 +74,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="324dp"
             android:fontFamily="@font/days_one"
-            android:shadowColor="#FEFEFE"
+            android:shadowColor="#0091EA"
             android:shadowDy="10"
             android:shadowRadius="10"
             android:text="Alle Übungen"

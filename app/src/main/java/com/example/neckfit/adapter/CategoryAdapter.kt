@@ -39,8 +39,6 @@ class CategoryAdapter(
     // hier findet der Recyclingprozess statt
     // die vom ViewHolder bereitgestellten Parameter werden verändert
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        // im dataset steht jetzt dank submitList-Aufruf in Zeile 55 die exercises Liste
-        // das einzelne element, dessen namen wir jetzt anzeigen wollen, nennen wir exercise
         val exercise = dataset[position]
         // wie immer den String, der in exercise.name steht, in die View laden
         holder.name.text = exercise.name

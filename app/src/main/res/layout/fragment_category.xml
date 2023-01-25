@@ -36,7 +36,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/backButtonTraining"
+            android:id="@+id/backButtonCategory"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_marginStart="16dp"
@@ -51,9 +51,9 @@
             android:layout_height="45dp"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/days_one"
-            android:shadowColor="#BFBEBE"
+            android:shadowColor="#0091EA"
             android:shadowDy="25"
-            android:shadowRadius="25"
+            android:shadowRadius="15"
             android:text="Category"
             android:textAlignment="center"
             android:textAllCaps="true"
@@ -61,7 +61,7 @@
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="@+id/home_toolbar"
             app:layout_constraintHorizontal_bias="0.382"
-            app:layout_constraintStart_toEndOf="@+id/backButtonTraining"
+            app:layout_constraintStart_toEndOf="@+id/backButtonCategory"
             app:layout_constraintTop_toTopOf="@+id/home_toolbar" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -37,18 +37,15 @@ class FragmentTheme : Fragment() {
 
         binding.themeRecycler.adapter= themeAdapter
 
-        binding.backButtonTraining.setOnClickListener {
+        binding.backButtonTheme.setOnClickListener {
             findNavController().navigateUp()
         }
 
-        binding.themeRecycler.adapter = themeAdapter
         viewModel.getThemes()
-
         viewModel.themes.observe(viewLifecycleOwner){
             themeAdapter.submitList(it)
         }
         binding.allButton.setOnClickListener {
-        //TODO Button hinzufügen.
             findNavController()
                 .navigate(FragmentThemeDirections.actionFragmentThemeToFragmentTraining())
         }

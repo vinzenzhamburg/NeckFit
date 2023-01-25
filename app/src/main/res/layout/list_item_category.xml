@@ -43,7 +43,7 @@
                     android:layout_marginEnd="88dp"
                     android:layout_marginBottom="8dp"
                     android:fontFamily="@font/days_one"
-                    android:shadowColor="#F4F5F5"
+                    android:shadowColor="#0091EA"
                     android:shadowDy="10"
                     android:shadowRadius="10"
                     android:text="hint"

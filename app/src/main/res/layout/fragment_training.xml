@@ -29,9 +29,9 @@
             android:layout_height="44dp"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/days_one"
-            android:shadowColor="#F9F7F7"
-            android:shadowDy="25"
-            android:shadowRadius="25"
+            android:shadowColor="#0091EA"
+            android:shadowDy="15"
+            android:shadowRadius="15"
             android:text="Training"
             android:textAlignment="center"
             android:textAllCaps="true"
@@ -50,22 +50,23 @@
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="@+id/training_toolbar"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_arrow_back_ios_new_24" />
+            app:srcCompat="@drawable/ic_baseline_arrow_back_ios_new_24"
+            android:contentDescription="TODO" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/AllTrainingsRecycler"
+            android:id="@+id/allTrainingsRecycler"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/themen_training_toolbar"
             app:layout_constraintVertical_bias="0.008"
-            tools:listitem="@layout/list_item_all_training"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:itemCount="5"
-            android:orientation="horizontal"/>
+            tools:listitem="@layout/list_item_all_training" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

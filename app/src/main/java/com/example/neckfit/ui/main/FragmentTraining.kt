@@ -7,7 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearSnapHelper
 import com.example.neckfit.R
+import com.example.neckfit.adapter.AllTrainAdapter
+import com.example.neckfit.data.datamodel.Training
 import com.example.neckfit.databinding.FragmentCategoryBinding
 import com.example.neckfit.databinding.FragmentTrainingBinding
 import com.example.neckfit.ui.MainViewModel
@@ -15,9 +18,7 @@ import com.example.neckfit.ui.MainViewModel
 class FragmentTraining : Fragment() {
 
     private lateinit var binding: FragmentTrainingBinding
-
     private val viewModel: MainViewModel by activityViewModels()
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,5 +36,19 @@ class FragmentTraining : Fragment() {
         binding.backButtonTraining.setOnClickListener {
             findNavController().navigateUp()
         }
+        val trainingsAdapter = AllTrainAdapter()
+
+        viewModel.getAllTraining()
+        viewModel.allTraining.observe(viewLifecycleOwner) {
+                trainingsAdapter.submitList(it)
+
+        binding.allTrainingsRecycler.adapter = trainingsAdapter
+        binding.backButtonTraining.setOnClickListener {
+                findNavController().navigateUp()
+            }
+        }
+        var snapHelper = LinearSnapHelper()
+        snapHelper.attachToRecyclerView(binding.allTrainingsRecycler)
     }
+
 }
