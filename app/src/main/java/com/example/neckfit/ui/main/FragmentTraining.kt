@@ -43,9 +43,7 @@ class FragmentTraining : Fragment() {
                 trainingsAdapter.submitList(it)
 
         binding.allTrainingsRecycler.adapter = trainingsAdapter
-        binding.backButtonTraining.setOnClickListener {
-                findNavController().navigateUp()
-            }
+
         }
         var snapHelper = LinearSnapHelper()
         snapHelper.attachToRecyclerView(binding.allTrainingsRecycler)

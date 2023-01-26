@@ -34,6 +34,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val allTraining: LiveData<List<Training>>
         get() = _allTraining
 
+    private val _currentTraining = MutableLiveData<List<Training>>()
+    val currentTraining: LiveData<List<Training>>
+        get() = _currentTraining
+
     // Kommunikationspunkt mit der Firestore Datenbank
     private val db = FirebaseFirestore.getInstance()
 
@@ -103,5 +107,15 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope.launch {
             _allTraining.value = repo.loadAllTraining()
         }
+    }
+// TODO : Bauen eine derzeitige Trainingsliste
+
+    fun loadCurrent(category: String,supCategory: String){
+        val currentTraining  = mutableListOf<Training>()
+
+        val type = _exercises.value?.find {
+            it.name.equals(category)
+        }
+
     }
 }

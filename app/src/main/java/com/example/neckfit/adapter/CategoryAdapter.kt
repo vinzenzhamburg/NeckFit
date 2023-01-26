@@ -3,11 +3,15 @@ package com.example.neckfit.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.neckfit.R
 import com.example.neckfit.data.datamodel.Type
 import com.example.neckfit.data.datamodel.Uebung
+import com.example.neckfit.ui.main.FragmentCategoryDirections
+import com.example.neckfit.ui.main.FragmentThemeDirections
 
 
 class CategoryAdapter(
@@ -24,6 +28,8 @@ class CategoryAdapter(
     // der ViewHolder weiß welche Teile des Layouts beim Recycling angepasst werden
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         val name: TextView = view.findViewById(R.id.category_title_name)
+
+        val categoryButton: View =  view.findViewById(R.id.category_button)
     }
 
     // ERSTELLEN DES VIEWHOLDERS
@@ -42,6 +48,12 @@ class CategoryAdapter(
         val exercise = dataset[position]
         // wie immer den String, der in exercise.name steht, in die View laden
         holder.name.text = exercise.name
+
+        holder.categoryButton.setOnClickListener {
+            holder.itemView.findNavController()
+                .navigate(FragmentCategoryDirections.actionFragmentCategoryToFragmentTraining())
+        }
+
     }
 
     // damit der LayoutManager weiß wie lang die Liste ist
