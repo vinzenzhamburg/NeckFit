@@ -1,18 +1,15 @@
 package com.example.neckfit.ui.main
 
-import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearSnapHelper
-import com.example.neckfit.R
+import androidx.recyclerview.widget.PagerSnapHelper
 import com.example.neckfit.adapter.AllTrainAdapter
-import com.example.neckfit.data.datamodel.Training
-import com.example.neckfit.databinding.FragmentCategoryBinding
 import com.example.neckfit.databinding.FragmentTrainingBinding
 import com.example.neckfit.ui.MainViewModel
 
@@ -31,9 +28,10 @@ class FragmentTraining : Fragment() {
         return binding.root
     }
 
-    @SuppressLint("SuspiciousIndentation")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val categoryName = requireArguments().getString("category")
 
         binding.backButtonTraining.setOnClickListener {
             findNavController().navigateUp()
@@ -41,18 +39,24 @@ class FragmentTraining : Fragment() {
         val trainingsAdapter = AllTrainAdapter()
 
         viewModel.getAllTraining()
-        val category = requireArguments().getString("category")
-            if (category != null || category != ".")
-            {viewModel. .observe(viewLifecycleOwner){
-            trainingsAdapter.submitList(it)}
-            } else {
-            viewModel.allTraining.observe(viewLifecycleOwner)
-            { trainingsAdapter.submitList(it) }
-        }
+
         binding.allTrainingsRecycler.adapter = trainingsAdapter
 
-        var snapHelper = LinearSnapHelper()
+        viewModel.allTraining.observe(viewLifecycleOwner) { allTraining ->
+
+            viewModel.types.observe(viewLifecycleOwner) { list ->
+                val category = list.find { it.name == categoryName }
+
+                val trainings = viewModel.allTraining.value?.filter {
+                    category?.exercises?.contains(it.id) == true
+                }
+                if (trainings != null) {
+                    trainingsAdapter.submitList(trainings)
+                }
+            }
+        }
+
+        var snapHelper = PagerSnapHelper()
         snapHelper.attachToRecyclerView(binding.allTrainingsRecycler)
     }
-
 }

@@ -43,8 +43,9 @@ class FragmentCategory : Fragment() {
             }
 
             if (clickedTheme != null) {
-                val exercises = clickedTheme.types
-                categoryAdapter.submitList(exercises)
+                val types = clickedTheme.types
+                viewModel.setTypes(types)
+                categoryAdapter.submitList(types)
             }
 
             binding.homeRecycler.adapter = categoryAdapter

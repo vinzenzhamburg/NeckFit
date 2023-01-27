@@ -51,7 +51,7 @@ class CategoryAdapter(
 
         holder.categoryButton.setOnClickListener {
             holder.itemView.findNavController()
-                .navigate(FragmentCategoryDirections.actionFragmentCategoryToFragmentTraining(category = holder.name.text as String))
+                .navigate(FragmentCategoryDirections.actionFragmentCategoryToFragmentTraining(category = exercise.name))
         }
 
     }
