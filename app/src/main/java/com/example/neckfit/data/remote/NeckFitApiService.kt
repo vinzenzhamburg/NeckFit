@@ -1,5 +1,6 @@
 package com.example.neckfit.data.remote
 
+import com.example.neckfit.data.datamodel.Category
 import com.example.neckfit.data.datamodel.Theme
 import com.example.neckfit.data.datamodel.Training
 import com.example.neckfit.data.datamodel.Uebung
@@ -32,6 +33,8 @@ interface NeckFitApiService {
     suspend fun getExercises(): List<Uebung>
     @GET("exercises.json")
     suspend fun getAllTraining(): List<Training>
+    @GET("categories.json")
+    suspend fun getAllCategory(): List<Category>
 
 }
 

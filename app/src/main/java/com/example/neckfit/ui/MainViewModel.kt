@@ -7,6 +7,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.neckfit.data.Repository
+import com.example.neckfit.data.datamodel.Category
 import com.example.neckfit.data.datamodel.Theme
 import com.example.neckfit.data.datamodel.Training
 import com.example.neckfit.data.datamodel.Uebung
@@ -37,6 +38,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     private val _currentTraining = MutableLiveData<List<Training>>()
     val currentTraining: LiveData<List<Training>>
         get() = _currentTraining
+
+    private val _category = MutableLiveData<List<Category>>()
+    val category: LiveData<List<Category>>
+        get() = _category
 
     // Kommunikationspunkt mit der Firestore Datenbank
     private val db = FirebaseFirestore.getInstance()
@@ -87,35 +92,52 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun logout() {
         firebaseAuth.signOut()
-            _currentUser.value = firebaseAuth.currentUser
+        _currentUser.value = firebaseAuth.currentUser
 
     }
 
-    fun getThemes(){
-        viewModelScope.launch{
+    fun getThemes() {
+        viewModelScope.launch {
             _themes.value = repo.loadThemes()
         }
     }
 
-    fun getExercises(){
+    fun getExercises() {
         viewModelScope.launch {
             _exercises.value = repo.loadExercises()
         }
     }
 
-    fun getAllTraining(){
+    fun getAllTraining() {
         viewModelScope.launch {
             _allTraining.value = repo.loadAllTraining()
         }
     }
+    // TODO : Category wird von String umgewandelt,
+    //  es werden alle trainings überprüft ob sie in der Category enthalten sind.
+
+    fun loadTrainCategory(category: String) {
+        viewModelScope.launch {
+            val realCategory = _category.value?.find {
+                it.name.equals(category)
+            }
+            val indexList: List<Int> = realCategory?.exercisesList ?: listOf(1)
+            var listTrainings: MutableList<Training> = mutableListOf()
+            for (i in _allTraining.value!!) {
+                if (indexList.contains(i.id)) {
+                    listTrainings.add(i)
+                }
+            }
+        }
+    }
+
 // TODO : Bauen eine derzeitige Trainingsliste
 
-    fun loadCurrent(category: String,supCategory: String){
-        val currentTraining  = mutableListOf<Training>()
+        fun loadCurrent(category: String, supCategory: String) {
+            val currentTraining = mutableListOf<Training>()
 
-        val type = _exercises.value?.find {
-            it.name.equals(category)
+            val type = _exercises.value?.find {
+                it.name.equals(category)
+            }
         }
-
-    }
 }

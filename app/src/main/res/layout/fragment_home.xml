@@ -18,8 +18,10 @@
             android:scaleType="matrix"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/wolken" />
 
         <Button
@@ -52,6 +54,7 @@
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -59,7 +62,6 @@
             android:id="@+id/title_toolbar"
             android:layout_width="195dp"
             android:layout_height="53dp"
-            android:layout_marginTop="8dp"
             android:fontFamily="@font/days_one"
             android:outlineProvider="none"
             android:shadowColor="#0091EA"
@@ -71,6 +73,7 @@
             android:textColor="#FCFCFC"
             android:textSize="34sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/Toolbar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="@+id/Toolbar"
@@ -101,12 +104,62 @@
             android:id="@+id/homeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="Home"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/days_one"
+            android:padding="15dp"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp"
+            android:text="Herzlich Willkommen bei NeckFit deiner Dehnungd-Übungs-App."
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#C4050505"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Toolbar" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="64dp"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/homeText">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/vinz_cover" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/infoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/days_one"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="15dp"
+            android:text="Hallo Neckfitter, Ich bin Vinzenz der Macher von Neckfit. Ich wünsche allen ein gutes erfolgreiches Dehnen und viel Flexibilität."
+            android:textAlignment="center"
+            android:textColor="#DE050505"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/start_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Toolbar" />
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

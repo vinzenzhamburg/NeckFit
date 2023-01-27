@@ -1,5 +1,6 @@
 package com.example.neckfit.ui.main
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -30,6 +31,7 @@ class FragmentTraining : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -39,12 +41,16 @@ class FragmentTraining : Fragment() {
         val trainingsAdapter = AllTrainAdapter()
 
         viewModel.getAllTraining()
-        viewModel.allTraining.observe(viewLifecycleOwner) {
-                trainingsAdapter.submitList(it)
-
+        val category = requireArguments().getString("category")
+            if (category != null || category != ".")
+            {viewModel. .observe(viewLifecycleOwner){
+            trainingsAdapter.submitList(it)}
+            } else {
+            viewModel.allTraining.observe(viewLifecycleOwner)
+            { trainingsAdapter.submitList(it) }
+        }
         binding.allTrainingsRecycler.adapter = trainingsAdapter
 
-        }
         var snapHelper = LinearSnapHelper()
         snapHelper.attachToRecyclerView(binding.allTrainingsRecycler)
     }

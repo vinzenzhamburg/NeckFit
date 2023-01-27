@@ -1,5 +1,6 @@
 package com.example.neckfit.data
 
+import com.example.neckfit.data.datamodel.Category
 import com.example.neckfit.data.datamodel.Theme
 import com.example.neckfit.data.datamodel.Training
 import com.example.neckfit.data.datamodel.Uebung
@@ -18,6 +19,10 @@ class Repository() {
 
     suspend fun loadAllTraining() : List<Training> {
         return NeckFitApi.retrofitService.getAllTraining()
+    }
+
+    suspend fun loadCategory() : List<Category> {
+        return NeckFitApi.retrofitService.getAllCategory()
     }
 }
 

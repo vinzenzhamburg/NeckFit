@@ -53,6 +53,10 @@
         <action
             android:id="@+id/action_fragment_training_to_fragment_theme"
             app:destination="@id/fragment_theme" />
+        <argument
+            android:name="category"
+            app:argType="string"
+            android:defaultValue="." />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
