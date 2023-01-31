@@ -1,29 +1,31 @@
 package com.example.neckfit.ui.main
 
 import android.os.Bundle
-import android.util.Log
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.PagerSnapHelper
+import com.example.neckfit.R
+import com.example.neckfit.adapter.AllAdapter
 import com.example.neckfit.adapter.AllTrainAdapter
+import com.example.neckfit.databinding.FragmentAllBinding
 import com.example.neckfit.databinding.FragmentTrainingBinding
 import com.example.neckfit.ui.MainViewModel
 
-class FragmentTraining : Fragment() {
 
-    private lateinit var binding: FragmentTrainingBinding
+class AllFragment : Fragment() {
+
+    private lateinit var binding: FragmentAllBinding
     private val viewModel: MainViewModel by activityViewModels()
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentTrainingBinding.inflate(inflater)
+    ): View? {
+        binding = FragmentAllBinding.inflate(inflater)
 
         return binding.root
     }
@@ -31,28 +33,16 @@ class FragmentTraining : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val categoryName = requireArguments().getString("category")
-
         binding.backButtonTraining.setOnClickListener {
             findNavController().navigateUp()
         }
-        val trainingsAdapter = AllTrainAdapter()
+        val allAdapter = AllAdapter()
 
         viewModel.getAllTraining()
-        binding.allTrainingsRecycler.adapter = trainingsAdapter
+        binding.allTrainingsRecycler.adapter = allAdapter
 
-        viewModel.allTraining.observe(viewLifecycleOwner) { allTraining ->
-
-            viewModel.types.observe(viewLifecycleOwner) { list ->
-                val category = list.find { it.name == categoryName }
-
-                val trainings = viewModel.allTraining.value?.filter {
-                    category?.exercises?.contains(it.id) == true
-                }
-                if (trainings != null) {
-                    trainingsAdapter.submitList(trainings)
-                }
-            }
+        viewModel.allTraining.observe(viewLifecycleOwner){
+            allAdapter.submitList(it)
         }
 
         var snapHelper = PagerSnapHelper()

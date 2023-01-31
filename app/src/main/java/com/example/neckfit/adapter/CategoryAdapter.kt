@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.neckfit.R
-import com.example.neckfit.data.datamodel.Type
+import com.example.neckfit.data.datamodel.Category
 import com.example.neckfit.data.datamodel.Uebung
 import com.example.neckfit.ui.main.FragmentCategoryDirections
 import com.example.neckfit.ui.main.FragmentThemeDirections
@@ -17,9 +17,9 @@ import com.example.neckfit.ui.main.FragmentThemeDirections
 class CategoryAdapter(
 
     ) : RecyclerView.Adapter<CategoryAdapter.ItemViewHolder>() {
-    private var dataset: List<Type> = emptyList()
+    private var dataset: List<Category> = emptyList()
 
-    fun submitList(list : List<Type>){
+    fun submitList(list : List<Category>){
         dataset = list
         notifyDataSetChanged()
     }

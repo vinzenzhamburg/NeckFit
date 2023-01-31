@@ -44,6 +44,9 @@
         <action
             android:id="@+id/action_fragment_theme_to_fragment_training"
             app:destination="@id/fragment_training" />
+        <action
+            android:id="@+id/action_fragment_theme_to_allFragment"
+            app:destination="@id/allFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragment_training"
@@ -72,4 +75,13 @@
         android:name="com.example.neckfit.ui.authentication.SignupFragment"
         android:label="fragment_signup"
         tools:layout="@layout/fragment_signup"/>
+    <fragment
+        android:id="@+id/allFragment"
+        android:name="com.example.neckfit.ui.main.AllFragment"
+        android:label="AllFragment"
+        tools:layout="@layout/fragment_all">
+        <action
+            android:id="@+id/action_allFragment_to_fragment_theme"
+            app:destination="@id/fragment_theme" />
+    </fragment>
 </navigation>

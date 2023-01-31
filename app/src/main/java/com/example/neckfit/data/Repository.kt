@@ -1,11 +1,7 @@
 package com.example.neckfit.data
 
-import com.example.neckfit.data.datamodel.Category
-import com.example.neckfit.data.datamodel.Theme
-import com.example.neckfit.data.datamodel.Training
-import com.example.neckfit.data.datamodel.Uebung
+import com.example.neckfit.data.datamodel.*
 import com.example.neckfit.data.remote.NeckFitApi
-
 
 class Repository() {
 

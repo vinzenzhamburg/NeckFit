@@ -1,17 +1,13 @@
 package com.example.neckfit.data.remote
 
-import com.example.neckfit.data.datamodel.Category
-import com.example.neckfit.data.datamodel.Theme
-import com.example.neckfit.data.datamodel.Training
-import com.example.neckfit.data.datamodel.Uebung
+import com.example.neckfit.data.datamodel.*
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 
-
-// muss geändert werden
+// Name muss geändert werden Bei jeden Projekt
 const val BASE_URL = "https://public.syntax-institut.de/apps/batch4/Vinzenz/"
 
 private val moshi = Moshi.Builder()
@@ -42,3 +38,4 @@ interface NeckFitApiService {
 object NeckFitApi {
     val retrofitService: NeckFitApiService by lazy { retrofit.create(NeckFitApiService::class.java) }
 }
+//TODO: ApiServive,Repository,MainViewModel,Fragment,ReclcerView

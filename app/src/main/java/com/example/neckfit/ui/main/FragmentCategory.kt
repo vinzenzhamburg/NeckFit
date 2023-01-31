@@ -14,6 +14,7 @@ import com.example.neckfit.adapter.ThemeAdapter
 import com.example.neckfit.databinding.FragmentCategoryBinding
 import com.example.neckfit.databinding.FragmentLoginBinding
 import com.example.neckfit.databinding.FragmentThemeBinding
+import com.example.neckfit.ui.ApiStatus
 import com.example.neckfit.ui.MainViewModel
 
 
@@ -51,6 +52,19 @@ class FragmentCategory : Fragment() {
             binding.homeRecycler.adapter = categoryAdapter
             binding.backButtonCategory.setOnClickListener {
                 findNavController().navigateUp()
+            }
+        }
+        viewModel.loading.observe(viewLifecycleOwner) {
+            when (it) {
+                ApiStatus.LOADING -> {
+                    binding.progressBar.visibility = View.VISIBLE
+                }
+                ApiStatus.DONE -> {
+                    binding.progressBar.visibility = View.GONE
+                }
+                ApiStatus.ERROR -> {
+                    binding.progressBar.visibility = View.GONE
+                }
             }
         }
     }

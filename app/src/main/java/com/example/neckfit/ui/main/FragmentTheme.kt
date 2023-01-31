@@ -15,10 +15,7 @@ import com.example.neckfit.ui.MainViewModel
 class FragmentTheme : Fragment() {
 
     private lateinit var binding: FragmentThemeBinding
-
-
     private val viewModel: MainViewModel by activityViewModels()
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -47,8 +44,7 @@ class FragmentTheme : Fragment() {
         }
         binding.allButton.setOnClickListener {
             findNavController()
-                .navigate(FragmentThemeDirections.actionFragmentThemeToFragmentTraining())
+                .navigate(FragmentThemeDirections.actionFragmentThemeToAllFragment())
         }
-
     }
 }

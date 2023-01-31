@@ -16,9 +16,15 @@ import kotlinx.coroutines.launch
 
 const val TAG = "MainViewModel"
 
+enum class ApiStatus { LOADING, ERROR, DONE }
+
 class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repo = Repository()
+//TODO : LOADING SYMBOL
+    private val _loading = MutableLiveData<ApiStatus>()
+    val loading: LiveData<ApiStatus>
+        get() = _loading
 
     private val _themes = MutableLiveData<List<Theme>>()
     val themes: LiveData<List<Theme>>
@@ -40,8 +46,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val category: LiveData<List<Category>>
         get() = _category
 
-    private val _types = MutableLiveData<List<Type>>()
-    val types: LiveData<List<Type>>
+    private val _types = MutableLiveData<List<Category>>()
+    val types: LiveData<List<Category>>
         get() = _types
 
     // Kommunikationspunkt mit der Firestore Datenbank
@@ -114,7 +120,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    fun setTypes(types: List<Type>) {
+    fun setTypes(types: List<Category>) {
         _types.value = types
     }
 }
