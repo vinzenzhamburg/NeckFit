@@ -29,9 +29,8 @@ interface NeckFitApiService {
     suspend fun getExercises(): List<Uebung>
     @GET("exercises.json")
     suspend fun getAllTraining(): List<Training>
-    @GET("categories.json")
-    suspend fun getAllCategory(): List<Category>
-
+   // @GET("categories.json")
+    //suspend fun getAllCategory(): List<Category>
 }
 
 // namen müssen geändert werden

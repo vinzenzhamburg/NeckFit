@@ -17,9 +17,7 @@ import com.example.neckfit.ui.MainViewModel
 class LoginFragment : Fragment() {
 
     private lateinit var binding : FragmentLoginBinding
-
     private val viewModel : MainViewModel by activityViewModels()
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,9 +29,9 @@ class LoginFragment : Fragment() {
 
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
 
         viewModel.toast.observe(viewLifecycleOwner) {
             if (it != null) {
@@ -62,5 +60,4 @@ class LoginFragment : Fragment() {
                 .navigate(LoginFragmentDirections.actionLoginFragmentToSignupFragment())
         }
     }
-
 }

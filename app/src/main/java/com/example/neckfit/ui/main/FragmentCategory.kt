@@ -8,12 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.example.neckfit.R
 import com.example.neckfit.adapter.CategoryAdapter
-import com.example.neckfit.adapter.ThemeAdapter
 import com.example.neckfit.databinding.FragmentCategoryBinding
-import com.example.neckfit.databinding.FragmentLoginBinding
-import com.example.neckfit.databinding.FragmentThemeBinding
 import com.example.neckfit.ui.ApiStatus
 import com.example.neckfit.ui.MainViewModel
 

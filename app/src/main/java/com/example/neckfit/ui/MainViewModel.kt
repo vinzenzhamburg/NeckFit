@@ -48,7 +48,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     private val _types = MutableLiveData<List<Category>>()
     val types: LiveData<List<Category>>
-        get() = _types
+       get() = _types
 
     // Kommunikationspunkt mit der Firestore Datenbank
     private val db = FirebaseFirestore.getInstance()

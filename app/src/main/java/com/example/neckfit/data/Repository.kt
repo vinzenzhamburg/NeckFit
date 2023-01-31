@@ -16,9 +16,5 @@ class Repository() {
     suspend fun loadAllTraining() : List<Training> {
         return NeckFitApi.retrofitService.getAllTraining()
     }
-
-    suspend fun loadCategory() : List<Category> {
-        return NeckFitApi.retrofitService.getAllCategory()
-    }
 }
 
