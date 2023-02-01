@@ -47,6 +47,9 @@
         <action
             android:id="@+id/action_fragment_theme_to_allFragment"
             app:destination="@id/allFragment" />
+        <action
+            android:id="@+id/action_fragment_theme_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragment_training"
@@ -82,6 +85,15 @@
         tools:layout="@layout/fragment_all">
         <action
             android:id="@+id/action_allFragment_to_fragment_theme"
+            app:destination="@id/fragment_theme" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.neckfit.ui.main.FavoriteFragment"
+        android:label="FavoriteFragment"
+        tools:layout="@layout/fragment_favorite">
+        <action
+            android:id="@+id/action_favoriteFragment_to_fragment_theme"
             app:destination="@id/fragment_theme" />
     </fragment>
 </navigation>
