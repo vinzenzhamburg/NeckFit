@@ -9,5 +9,6 @@ data class Training(
     @PrimaryKey
     val id : Int,
     val image : String,
-    val description : String
+    val description : String,
+    var favorite : Boolean = false
 )

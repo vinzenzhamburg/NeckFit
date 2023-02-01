@@ -1,9 +1,11 @@
 package com.example.neckfit.data
 
 import com.example.neckfit.data.datamodel.*
+import com.example.neckfit.data.local.TrainingsDatabase
+import com.example.neckfit.data.local.TrainingsDatabaseDao
 import com.example.neckfit.data.remote.NeckFitApi
 
-class Repository() {
+class Repository(private val database: TrainingsDatabase) {
 
     suspend fun loadThemes() : List<Theme> {
         return NeckFitApi.retrofitService.getThemes()
@@ -15,6 +17,13 @@ class Repository() {
 
     suspend fun loadAllTraining() : List<Training> {
         return NeckFitApi.retrofitService.getAllTraining()
+    }
+//TODO : Fixed Error
+    suspend fun setFavorite(training: Training) {
+        if(training.favorite){
+        database.trainingsDatabaseDao.insert(training)
+        }else if (!training.favorite)
+        database.trainingsDatabaseDao.delete(training)
     }
 }
 

@@ -9,11 +9,11 @@ interface TrainingsDatabaseDao {
     @Query("SELECT * FROM Training")
     fun getAll() : LiveData<List<Training>>
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(training: Training)
+    @Insert(onConflict = OnConflictStrategy.ABORT)
+    fun insert(training: Training)
 
     @Delete
-    suspend fun delete(training: Training)
+    fun delete(training: Training)
 
 
 }

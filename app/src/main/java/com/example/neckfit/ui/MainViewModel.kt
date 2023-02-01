@@ -8,6 +8,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.neckfit.data.Repository
 import com.example.neckfit.data.datamodel.*
+import com.example.neckfit.data.local.getDatabase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
@@ -20,8 +21,9 @@ enum class ApiStatus { LOADING, ERROR, DONE }
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val repo = Repository()
-//TODO : LOADING SYMBOL
+    private val localDb = getDatabase(application)
+    private val repo = Repository(localDb)
+
     private val _loading = MutableLiveData<ApiStatus>()
     val loading: LiveData<ApiStatus>
         get() = _loading
@@ -114,5 +116,11 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         _loading.value = ApiStatus.LOADING
         _types.value = types
         _loading.value = ApiStatus.DONE
+    }
+
+    fun setFavorite(training: Training){
+        viewModelScope.launch {
+            repo.setFavorite(training)
+        }
     }
 }

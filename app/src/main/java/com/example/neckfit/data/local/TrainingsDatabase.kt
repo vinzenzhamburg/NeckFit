@@ -10,6 +10,7 @@ import com.example.neckfit.data.datamodel.Training
 abstract class TrainingsDatabase : RoomDatabase() {
     abstract val trainingsDatabaseDao: TrainingsDatabaseDao
 }
+
 private lateinit var INSTANCE: TrainingsDatabase
 // if there's no Database a new one is built
 fun getDatabase(context: Context): TrainingsDatabase {
