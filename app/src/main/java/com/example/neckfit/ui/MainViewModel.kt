@@ -31,16 +31,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         get() = _themes
 
     private val _exercises = MutableLiveData<List<Uebung>>()
-    val exercises: LiveData<List<Uebung>>
-        get() = _exercises
 
     private val _allTraining = MutableLiveData<List<Training>>()
     val allTraining: LiveData<List<Training>>
         get() = _allTraining
-
-    private val _currentTraining = MutableLiveData<List<Training>>()
-    val currentTraining: LiveData<List<Training>>
-        get() = _currentTraining
 
     private val _category = MutableLiveData<List<Category>>()
     val category: LiveData<List<Category>>
@@ -107,12 +101,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             _loading.value = ApiStatus.LOADING
             _themes.value = repo.loadThemes()
             _loading.value = ApiStatus.DONE
-        }
-    }
-
-    fun getExercises() {
-        viewModelScope.launch {
-            _exercises.value = repo.loadExercises()
         }
     }
 
