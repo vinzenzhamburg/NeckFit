@@ -1,14 +1,15 @@
 package com.example.neckfit.ui.main
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.neckfit.adapter.ThemeAdapter
 import com.example.neckfit.databinding.FragmentThemeBinding
+import com.example.neckfit.ui.ApiStatus
 import com.example.neckfit.ui.MainViewModel
 
 
@@ -45,6 +46,20 @@ class FragmentTheme : Fragment() {
         binding.allButton.setOnClickListener {
             findNavController()
                 .navigate(FragmentThemeDirections.actionFragmentThemeToAllFragment())
+        }
+        // TODO: Progressbar
+        viewModel.loading.observe(viewLifecycleOwner) {
+            when (it) {
+                ApiStatus.LOADING -> {
+                    binding.progressBar.visibility = View.VISIBLE
+                }
+                ApiStatus.DONE -> {
+                    binding.progressBar.visibility = View.GONE
+                }
+                ApiStatus.ERROR -> {
+                    binding.progressBar.visibility = View.GONE
+                }
+            }
         }
     }
 }

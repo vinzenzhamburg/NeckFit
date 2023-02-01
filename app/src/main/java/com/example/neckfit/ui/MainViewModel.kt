@@ -104,7 +104,9 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun getThemes() {
         viewModelScope.launch {
+            _loading.value = ApiStatus.LOADING
             _themes.value = repo.loadThemes()
+            _loading.value = ApiStatus.DONE
         }
     }
 
@@ -121,6 +123,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun setTypes(types: List<Category>) {
+        _loading.value = ApiStatus.LOADING
         _types.value = types
+        _loading.value = ApiStatus.DONE
     }
 }
