@@ -45,15 +45,8 @@ class AllTrainAdapter (private val mainViewModel : MainViewModel)
         holder.image.load(training.image)
         holder.description.text = training.description
         holder.favoriteStar.setOnClickListener{
-           toggleFavorite(training)
            mainViewModel.setFavorite(training)
         }
-    }
-
-    private fun toggleFavorite(training: Training) {
-  // Wenn Trainings-Übung Bereits in den Favorite gesetzt ist wird,
-  // Favorite auf False gesetzt und andersrum.
-        training.favorite= !training.favorite
     }
 
     // damit der LayoutManager weiß wie lang die Liste ist

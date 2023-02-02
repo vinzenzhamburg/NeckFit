@@ -6,14 +6,15 @@ import com.example.neckfit.data.datamodel.Training
 
 @Dao
 interface TrainingsDatabaseDao {
+
     @Query("SELECT * FROM Training")
-    fun getAll() : LiveData<List<Training>>
+    suspend fun getAllFavorites() : LiveData<List<Training>>
 
     @Insert(onConflict = OnConflictStrategy.ABORT)
-    fun insert(training: Training)
+    suspend fun insert(training: Training)
 
     @Delete
-    fun delete(training: Training)
+    suspend fun delete(training: Training)
 
 
 }

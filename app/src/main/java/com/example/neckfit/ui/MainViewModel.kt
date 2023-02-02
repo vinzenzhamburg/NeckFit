@@ -119,6 +119,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun setFavorite(training: Training){
+        training.favorite= !training.favorite
         viewModelScope.launch {
             repo.setFavorite(training)
         }

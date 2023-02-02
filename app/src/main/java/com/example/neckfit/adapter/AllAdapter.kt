@@ -9,8 +9,10 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.neckfit.R
 import com.example.neckfit.data.datamodel.Training
+import com.example.neckfit.ui.MainViewModel
 
-class AllAdapter : RecyclerView.Adapter<AllAdapter.ItemViewHolder>() {
+class AllAdapter (private val mainViewModel : MainViewModel)
+    : RecyclerView.Adapter<AllAdapter.ItemViewHolder>() {
 
     private var dataset: List<Training> = emptyList()
 
@@ -18,11 +20,13 @@ class AllAdapter : RecyclerView.Adapter<AllAdapter.ItemViewHolder>() {
     fun submitList(allTraining: List<Training>) {
         dataset = allTraining
         notifyDataSetChanged()
+
     }
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
 
         val image: ImageView = view.findViewById(R.id.imageAllTrain)
         val description: TextView = view.findViewById(R.id.text_alltrain)
+        val favoriteStar: ImageView = view.findViewById(R.id.favoriteStar)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AllAdapter.ItemViewHolder {
@@ -32,9 +36,6 @@ class AllAdapter : RecyclerView.Adapter<AllAdapter.ItemViewHolder>() {
 
     }
 
-
-
-    // damit der LayoutManager weiß wie lang die Liste ist
     override fun getItemCount(): Int {
         return dataset.size
     }
@@ -44,5 +45,8 @@ class AllAdapter : RecyclerView.Adapter<AllAdapter.ItemViewHolder>() {
 
         holder.image.load(training.image)
         holder.description.text = training.description
+        holder.favoriteStar.setOnClickListener{
+            mainViewModel.setFavorite(training)
+        }
     }
 }

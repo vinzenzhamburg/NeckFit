@@ -18,7 +18,7 @@ class Repository(private val database: TrainingsDatabase) {
     suspend fun loadAllTraining() : List<Training> {
         return NeckFitApi.retrofitService.getAllTraining()
     }
-//TODO : Fixed Error
+
     suspend fun setFavorite(training: Training) {
         if(training.favorite){
         database.trainingsDatabaseDao.insert(training)
