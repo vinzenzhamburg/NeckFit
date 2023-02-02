@@ -8,13 +8,12 @@ import com.example.neckfit.data.datamodel.Training
 interface TrainingsDatabaseDao {
 
     @Query("SELECT * FROM Training")
-    suspend fun getAllFavorites() : LiveData<List<Training>>
+    fun getAllFavorites() : LiveData<List<Training>>
 
     @Insert(onConflict = OnConflictStrategy.ABORT)
     suspend fun insert(training: Training)
 
     @Delete
     suspend fun delete(training: Training)
-
 
 }

@@ -43,11 +43,17 @@ class FragmentTheme : Fragment() {
         viewModel.themes.observe(viewLifecycleOwner){
             themeAdapter.submitList(it)
         }
+
         binding.allButton.setOnClickListener {
             findNavController()
                 .navigate(FragmentThemeDirections.actionFragmentThemeToAllFragment())
         }
-        // TODO: Progressbar
+
+        binding.favoritelButton.setOnClickListener {
+            findNavController()
+                .navigate(FragmentThemeDirections.actionFragmentThemeToFavoriteFragment())
+        }
+
         viewModel.loading.observe(viewLifecycleOwner) {
             when (it) {
                 ApiStatus.LOADING -> {
