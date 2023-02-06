@@ -27,7 +27,6 @@
             android:id="@+id/favorite_training_toolbar"
             android:layout_width="303dp"
             android:layout_height="32dp"
-            android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:fontFamily="@font/days_one"
@@ -41,8 +40,7 @@
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="@+id/favorite_toolbar"
             app:layout_constraintEnd_toEndOf="@+id/favorite_toolbar"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/backButtonTraining"
+            app:layout_constraintStart_toStartOf="@+id/favorite_toolbar"
             app:layout_constraintTop_toTopOf="@+id/favorite_toolbar" />
 
         <ImageView
