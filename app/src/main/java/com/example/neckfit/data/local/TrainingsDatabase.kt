@@ -12,7 +12,7 @@ abstract class TrainingsDatabase : RoomDatabase() {
 }
 
 private lateinit var INSTANCE: TrainingsDatabase
-// if there's no Database a new one is built
+
 fun getDatabase(context: Context): TrainingsDatabase {
     synchronized(TrainingsDatabase::class.java) {
         if (!::INSTANCE.isInitialized) {
@@ -20,8 +20,7 @@ fun getDatabase(context: Context): TrainingsDatabase {
                 context.applicationContext,
                 TrainingsDatabase::class.java,
                 "trainings_database"
-            )
-                .build()
+            ).build()
         }
     }
     return INSTANCE
