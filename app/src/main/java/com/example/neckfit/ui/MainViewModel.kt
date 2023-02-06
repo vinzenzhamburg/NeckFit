@@ -38,6 +38,9 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val allTraining: LiveData<List<Training>>
         get() = _allTraining
 
+
+    val favoriteTraining = localDb.trainingsDatabaseDao.getAllFavorites()
+
     private val _category = MutableLiveData<List<Category>>()
     val category: LiveData<List<Category>>
         get() = _category
@@ -65,8 +68,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val toast: LiveData<String?>
         get() = _toast
 
-    // hier wird versucht einen User zu erstellen um diesen anschließend auch gleich
-    // einzuloggen
     fun signUp(email: String, password: String) {
         firebaseAuth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener {
