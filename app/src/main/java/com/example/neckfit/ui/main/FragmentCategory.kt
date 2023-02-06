@@ -50,6 +50,7 @@ class FragmentCategory : Fragment() {
                 findNavController().navigateUp()
             }
         }
+
         viewModel.loading.observe(viewLifecycleOwner) {
             when (it) {
                 ApiStatus.LOADING -> {
