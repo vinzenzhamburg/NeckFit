@@ -35,6 +35,7 @@ class FragmentTraining : Fragment() {
         binding.backButtonTraining.setOnClickListener {
             findNavController().navigateUp()
         }
+
         val trainingsAdapter = AllTrainAdapter(viewModel)
 
         viewModel.getAllTraining()
