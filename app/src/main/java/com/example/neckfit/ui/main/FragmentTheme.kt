@@ -12,7 +12,6 @@ import com.example.neckfit.databinding.FragmentThemeBinding
 import com.example.neckfit.ui.ApiStatus
 import com.example.neckfit.ui.MainViewModel
 
-
 class FragmentTheme : Fragment() {
 
     private lateinit var binding: FragmentThemeBinding
@@ -34,7 +33,6 @@ class FragmentTheme : Fragment() {
         val themeAdapter = ThemeAdapter()
 
         binding.themeRecycler.adapter= themeAdapter
-
         binding.backButtonTheme.setOnClickListener {
             findNavController().navigateUp()
         }
