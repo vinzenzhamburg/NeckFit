@@ -7,7 +7,6 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 
-// Name muss geändert werden Bei jeden Projekt
 const val BASE_URL = "https://public.syntax-institut.de/apps/batch4/Vinzenz/"
 
 private val moshi = Moshi.Builder()
@@ -19,10 +18,8 @@ private val retrofit = Retrofit.Builder()
     .baseUrl(BASE_URL)
     .build()
 
-// name muss geändert werden
 interface NeckFitApiService {
 
-    // muss angepasst werden
     @GET("categories.json")
     suspend fun getThemes(): List<Theme>
     @GET("exercises.json")
@@ -33,8 +30,6 @@ interface NeckFitApiService {
     //suspend fun getAllCategory(): List<Category>
 }
 
-// namen müssen geändert werden
 object NeckFitApi {
     val retrofitService: NeckFitApiService by lazy { retrofit.create(NeckFitApiService::class.java) }
 }
-//TODO: ApiServive,Repository,MainViewModel,Fragment,ReclcerView
