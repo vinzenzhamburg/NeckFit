@@ -63,24 +63,25 @@ class AllTrainAdapter (private val mainViewModel : MainViewModel)
 
         if (checkFavorite(training)){
 //:Dieses Trainings ist Favorisierst
+            holder.favoriteStarRed.setOnClickListener {
+                mainViewModel.deleteFavorite(training)
+            }
             holder.favoriteStarRed.visibility = View.VISIBLE
             holder.favoriteStar.visibility = View.INVISIBLE
 
-            holder.favoriteStar.setOnClickListener {
+
 
 //TODO : Entfavorisieren des Trainings
 
 
-            }
-
         } else{
 //Training nicht favorisiert
-            holder.favoriteStarRed.visibility = View.INVISIBLE
-            holder.favoriteStar.visibility = View.VISIBLE
-
             holder.favoriteStar.setOnClickListener {
                 mainViewModel.setFavorite(training)
             }
+            holder.favoriteStarRed.visibility = View.INVISIBLE
+            holder.favoriteStar.visibility = View.VISIBLE
+
         }
     }
 
