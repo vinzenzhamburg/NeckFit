@@ -15,15 +15,17 @@ import com.example.neckfit.ui.MainViewModel
 
 class SignupFragment : Fragment() {
 
-    private lateinit var binding : FragmentSignupBinding
-    private val viewModel : MainViewModel by activityViewModels()
+    private lateinit var binding: FragmentSignupBinding
+    private val viewModel: MainViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-            binding = DataBindingUtil.inflate(inflater,
-                R.layout.fragment_signup,container,false)
+        binding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_signup, container, false
+        )
 
         return binding.root
     }
@@ -52,8 +54,8 @@ class SignupFragment : Fragment() {
         val email = binding.signupMail.text.toString()
         val password = binding.signupPassword.text.toString()
 
-        if(!email.isNullOrEmpty() && !password.isNullOrEmpty()) {
-            viewModel.signUp(email,password)
+        if (!email.isNullOrEmpty() && !password.isNullOrEmpty()) {
+            viewModel.signUp(email, password)
         }
     }
 }

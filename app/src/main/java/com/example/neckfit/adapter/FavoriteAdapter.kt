@@ -9,46 +9,35 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.neckfit.R
 import com.example.neckfit.data.datamodel.Training
-import com.example.neckfit.ui.MainViewModel
 
-class FavoriteAdapter(private val mainViewModel : MainViewModel)
-    : RecyclerView.Adapter<FavoriteAdapter.ItemViewHolder>(){
+class FavoriteAdapter: RecyclerView.Adapter<FavoriteAdapter.ItemViewHolder>(){
 
         private var dataset: List<Training> = emptyList()
-        fun submitList(list : List<Training>){
+
+    fun favoriteList(list: List<Training>){
             dataset = list
             notifyDataSetChanged()
         }
 
-        private var favoriteList: List<Training> = emptyList()
-        fun favoriteList(list: List<Training>){
-            //dataset = list
-            favoriteList = list
-            notifyDataSetChanged()
-//TODO : dapater zu laufen bringen
-
-        }
-
-    class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
+    class ItemViewHolder(private val view: View): RecyclerView.ViewHolder(view) {
 
         val imageFavorite: ImageView = view.findViewById(R.id.imageAllTrain)
         val textFavorite: TextView = view.findViewById(R.id.text_alltrain)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int)
-    : FavoriteAdapter.ItemViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
 
         val adapterLayout = LayoutInflater.from(parent.context)
             .inflate(R.layout.list_item_all_training, parent, false)
 
-        return FavoriteAdapter.ItemViewHolder(adapterLayout)
+        return ItemViewHolder(adapterLayout)
     }
 
-    override fun onBindViewHolder(holder: FavoriteAdapter.ItemViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
 
         val training = dataset[position]
 
-        holder.imageFavorite.load(training.favorite)
+        holder.imageFavorite.load(training.image)
         holder.textFavorite.text = training.description
 
     }

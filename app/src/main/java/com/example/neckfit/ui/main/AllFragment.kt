@@ -13,7 +13,7 @@ import com.example.neckfit.databinding.FragmentAllBinding
 import com.example.neckfit.ui.MainViewModel
 
 
-/*class AllFragment : Fragment() {
+class AllFragment : Fragment() {
 
     private lateinit var binding: FragmentAllBinding
     private val viewModel: MainViewModel by activityViewModels()
@@ -50,5 +50,3 @@ import com.example.neckfit.ui.MainViewModel
         snapHelper.attachToRecyclerView(binding.allTrainingsRecycler)
     }
 }
-
- */

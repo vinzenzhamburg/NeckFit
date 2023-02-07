@@ -16,16 +16,18 @@ import com.example.neckfit.ui.MainViewModel
 
 class LoginFragment : Fragment() {
 
-    private lateinit var binding : FragmentLoginBinding
-    private val viewModel : MainViewModel by activityViewModels()
+    private lateinit var binding: FragmentLoginBinding
+    private val viewModel: MainViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login,
-            container, false)
+        binding = DataBindingUtil.inflate(
+            inflater, R.layout.fragment_login,
+            container, false
+        )
 
         return binding.root
     }

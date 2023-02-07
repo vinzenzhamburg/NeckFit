@@ -47,7 +47,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     private val _types = MutableLiveData<List<Category>>()
     val types: LiveData<List<Category>>
-       get() = _types
+        get() = _types
 
     // Kommunikationspunkt mit der Firestore Datenbank
     private val db = FirebaseFirestore.getInstance()
@@ -119,10 +119,17 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         _loading.value = ApiStatus.DONE
     }
 
-    fun setFavorite(training: Training){
-        training.favorite= !training.favorite
+    fun setFavorite(training: Training) {
+        training.favorite = !training.favorite
         viewModelScope.launch {
             repo.setFavorite(training)
+        }
+    }
+
+    fun deleteFavorite(training: Training) {
+        training.favorite = training.favorite
+        viewModelScope.launch {
+            repo.deleteFavorite(training)
         }
     }
 }

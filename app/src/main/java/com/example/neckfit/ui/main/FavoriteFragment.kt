@@ -35,7 +35,7 @@ class FavoriteFragment : Fragment() {
             findNavController().navigateUp()
         }
 //TODO : Favorite :
-        val favoriteAdapter = FavoriteAdapter(viewModel)
+        val favoriteAdapter = FavoriteAdapter()
 
         binding.favoriteTrainingsRecycler.adapter = favoriteAdapter
 

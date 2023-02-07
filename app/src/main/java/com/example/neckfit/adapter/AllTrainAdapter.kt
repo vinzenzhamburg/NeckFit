@@ -12,30 +12,30 @@ import com.example.neckfit.R
 import com.example.neckfit.data.datamodel.Training
 import com.example.neckfit.ui.MainViewModel
 
-class AllTrainAdapter (private val mainViewModel : MainViewModel)
-    : RecyclerView.Adapter<AllTrainAdapter.ItemViewHolder>() {
+class AllTrainAdapter(private val mainViewModel: MainViewModel) :
+    RecyclerView.Adapter<AllTrainAdapter.ItemViewHolder>() {
 
     private var dataset: List<Training> = emptyList()
 
-        fun submitList(list : List<Training>){
+    fun submitList(list: List<Training>) {
         dataset = list
         notifyDataSetChanged()
     }
 
     private var favoriteList: List<Training> = emptyList()
-    fun favoriteList(list: List<Training>){
+    fun favoriteList(list: List<Training>) {
         favoriteList = list
         notifyDataSetChanged()
         Log.d("favoriteListtest", favoriteList.size.toString())
 
     }
 
-    private fun checkFavorite(training: Training): Boolean{
+    private fun checkFavorite(training: Training): Boolean {
         val isFavorite = favoriteList.filter {
             it.id == training.id
-        }   .isNotEmpty()
+        }.isNotEmpty()
 
-        Log.d("favoriteListtest",isFavorite.toString())
+        Log.d("favoriteListtest", isFavorite.toString())
         return isFavorite
     }
 
@@ -54,6 +54,7 @@ class AllTrainAdapter (private val mainViewModel : MainViewModel)
             .inflate(R.layout.list_item_all_training, parent, false)
         return ItemViewHolder(adapterLayout)
     }
+
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
 
         val training = dataset[position]
@@ -61,24 +62,21 @@ class AllTrainAdapter (private val mainViewModel : MainViewModel)
         holder.image.load(training.image)
         holder.description.text = training.description
 
-        if (checkFavorite(training)){
-//:Dieses Trainings ist Favorisierst
+        if (checkFavorite(training)) {
+
             holder.favoriteStarRed.setOnClickListener {
                 mainViewModel.deleteFavorite(training)
             }
+
             holder.favoriteStarRed.visibility = View.VISIBLE
             holder.favoriteStar.visibility = View.INVISIBLE
 
+        } else {
 
-
-//TODO : Entfavorisieren des Trainings
-
-
-        } else{
-//Training nicht favorisiert
             holder.favoriteStar.setOnClickListener {
                 mainViewModel.setFavorite(training)
             }
+
             holder.favoriteStarRed.visibility = View.INVISIBLE
             holder.favoriteStar.visibility = View.VISIBLE
 

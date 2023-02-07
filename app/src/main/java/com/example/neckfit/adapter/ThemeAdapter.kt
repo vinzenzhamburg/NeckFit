@@ -11,12 +11,11 @@ import com.example.neckfit.R
 import com.example.neckfit.data.datamodel.Theme
 import com.example.neckfit.ui.main.FragmentThemeDirections
 
-class ThemeAdapter(
-    ) : RecyclerView.Adapter<ThemeAdapter.ItemViewHolder>() {
+class ThemeAdapter() : RecyclerView.Adapter<ThemeAdapter.ItemViewHolder>() {
 
     private var dataset: List<Theme> = emptyList()
 
-    fun submitList(list : List<Theme>){
+    fun submitList(list: List<Theme>) {
         dataset = list
         notifyDataSetChanged()
     }
@@ -42,7 +41,7 @@ class ThemeAdapter(
         holder.name.text = theme.name
         holder.themeButton.setOnClickListener {
             holder.itemView.findNavController()
-                .navigate(FragmentThemeDirections.actionFragmentThemeToFragmentCategory(theme.name))
+            .navigate(FragmentThemeDirections.actionFragmentThemeToFragmentCategory(theme.name))
         }
     }
 

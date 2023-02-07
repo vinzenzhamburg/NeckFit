@@ -7,8 +7,8 @@ import androidx.room.PrimaryKey
 data class Training(
 
     @PrimaryKey
-    val id : Int,
-    val image : String,
-    val description : String,
-    var favorite : Boolean = false
+    val id: Int,
+    val image: String,
+    val description: String,
+    var favorite: Boolean = false
 )
