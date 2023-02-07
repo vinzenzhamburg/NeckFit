@@ -22,7 +22,7 @@ class FavoriteAdapter(private val mainViewModel : MainViewModel)
 
         private var favoriteList: List<Training> = emptyList()
         fun favoriteList(list: List<Training>){
-//            dataset = list
+            //dataset = list
             favoriteList = list
             notifyDataSetChanged()
 //TODO : dapater zu laufen bringen

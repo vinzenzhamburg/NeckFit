@@ -1,6 +1,5 @@
 package com.example.neckfit.data
 
-import android.provider.LiveFolders
 import androidx.lifecycle.LiveData
 import com.example.neckfit.data.datamodel.Theme
 import com.example.neckfit.data.datamodel.Training
@@ -14,21 +13,24 @@ class Repository(private val database: TrainingsDatabase) {
         return NeckFitApi.retrofitService.getThemes()
     }
 
-    suspend fun loadExercises(): List<Uebung> {
-        return NeckFitApi.retrofitService.getExercises()
-    }
+ //   suspend fun loadExercises(): List<Uebung> {
+ //       return NeckFitApi.retrofitService.getExercises()
+ //   }
 
     suspend fun loadAllTraining(): List<Training> {
         return NeckFitApi.retrofitService.getAllTraining()
     }
 
-    suspend fun getAllFavorite(): LiveData<List<Training>> =
-        database.trainingsDatabaseDao.getAllFavorites()
+ //   fun getAllFavorite(): LiveData<List<Training>> =
+  //      database.trainingsDatabaseDao.getAllFavorites()
+
+ //   suspend fun deleteFavorite(training: Training){
+ //       database.trainingsDatabaseDao.delete(training)
+ //   }
 
     suspend fun setFavorite(training: Training) {
         if (training.favorite) {
             database.trainingsDatabaseDao.insert(training)
-        } else if (!training.favorite)
-            database.trainingsDatabaseDao.delete(training)
+        }
     }
 }

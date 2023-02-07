@@ -12,7 +12,7 @@ import com.example.neckfit.R
 import com.example.neckfit.data.datamodel.Training
 import com.example.neckfit.ui.MainViewModel
 
-/*class AllAdapter (private val mainViewModel : MainViewModel)
+class AllAdapter (private val mainViewModel : MainViewModel)
     : RecyclerView.Adapter<AllAdapter.ItemViewHolder>() {
 
     private var dataset: List<Training> = emptyList()
@@ -56,5 +56,3 @@ import com.example.neckfit.ui.MainViewModel
         }
     }
 }
-
- */
