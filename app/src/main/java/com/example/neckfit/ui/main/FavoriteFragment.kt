@@ -34,8 +34,8 @@ class FavoriteFragment : Fragment() {
         binding.backButtonTraining.setOnClickListener {
             findNavController().navigateUp()
         }
-//TODO : Favorite :
-        val favoriteAdapter = FavoriteAdapter()
+
+        val favoriteAdapter = FavoriteAdapter(viewModel)
 
         binding.favoriteTrainingsRecycler.adapter = favoriteAdapter
 

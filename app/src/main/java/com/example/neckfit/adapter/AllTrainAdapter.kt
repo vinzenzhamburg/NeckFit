@@ -1,6 +1,5 @@
 package com.example.neckfit.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,16 +25,12 @@ class AllTrainAdapter(private val mainViewModel: MainViewModel) :
     fun favoriteList(list: List<Training>) {
         favoriteList = list
         notifyDataSetChanged()
-        Log.d("favoriteListtest", favoriteList.size.toString())
-
     }
 
     private fun checkFavorite(training: Training): Boolean {
         val isFavorite = favoriteList.filter {
             it.id == training.id
         }.isNotEmpty()
-
-        Log.d("favoriteListtest", isFavorite.toString())
         return isFavorite
     }
 
