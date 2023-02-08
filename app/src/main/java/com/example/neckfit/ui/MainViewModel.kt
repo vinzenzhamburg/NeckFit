@@ -127,7 +127,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun deleteFavorite(training: Training) {
-        training.favorite = training.favorite
+//        training.favorite = training.favorite
         viewModelScope.launch {
             repo.deleteFavorite(training)
         }
