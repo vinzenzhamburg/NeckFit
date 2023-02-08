@@ -38,7 +38,6 @@ class FragmentTraining : Fragment() {
 
         val trainingsAdapter = AllTrainAdapter(viewModel)
 
-        viewModel.getAllTraining()
         binding.allTrainingsRecycler.adapter = trainingsAdapter
 
         viewModel.allTraining.observe(viewLifecycleOwner) {
@@ -53,6 +52,10 @@ class FragmentTraining : Fragment() {
                     trainingsAdapter.submitList(trainings)
                 }
             }
+        }
+
+        viewModel.favoriteTraining.observe(viewLifecycleOwner) {
+            trainingsAdapter.favoriteList(it)
         }
 
         var snapHelper = PagerSnapHelper()
