@@ -41,7 +41,7 @@ class FragmentTraining : Fragment() {
         viewModel.getAllTraining()
         binding.allTrainingsRecycler.adapter = trainingsAdapter
 
-        viewModel.allTraining.observe(viewLifecycleOwner) { allTraining ->
+        viewModel.allTraining.observe(viewLifecycleOwner) {
 
             viewModel.types.observe(viewLifecycleOwner) { list ->
                 val category = list.find { it.name == categoryName }
